@@ -1,0 +1,116 @@
+backend:
+  name: github
+  repo: pauli/legaliza-tu-agua
+  branch: main
+  base_url: https://pauli.github.io
+  auth_endpoint: auth
+
+local_backend: true
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+display_url: "https://legalizatuagua.cl"
+locale: "es"
+
+collections:
+  # 1. SERVICIOS
+  - name: "servicios"
+    label: "Servicios"
+    label_singular: "Servicio"
+    folder: "src/content/servicios"
+    extension: "json"
+    format: "json"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Título del Servicio", name: "title", widget: "string" }
+      - { label: "Identificador (Slug)", name: "slug", widget: "string" }
+      - { label: "Descripción Corta", name: "desc", widget: "text" }
+      - { label: "Descripción Detallada", name: "content", widget: "markdown", required: false }
+      - { label: "Ícono / Imagen", name: "image", widget: "image", required: false }
+      - { label: "Orden de Visualización", name: "order", widget: "number", default: 1, value_type: "int" }
+      - { label: "Estado", name: "status", widget: "select", options: ["published", "draft"], default: "published" }
+
+  # 2. BIBLIOTECA JURÍDICA
+  - name: "biblioteca"
+    label: "Biblioteca Jurídica"
+    label_singular: "Publicación Jurídica"
+    folder: "src/content/biblioteca"
+    extension: "json"
+    format: "json"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título de la Publicación", name: "title", widget: "string" }
+      - { label: "Identificador (Slug)", name: "slug", widget: "string" }
+      - { label: "Categoría", name: "category", widget: "select", options: ["Guías prácticas", "Legislación", "Casos y análisis", "Noticias", "Gestión hídrica"] }
+      - { label: "Fecha", name: "date", widget: "string", default: "15 Jul 2026" }
+      - { label: "Tiempo Estimado de Lectura", name: "readingTime", widget: "string", default: "5 min" }
+      - { label: "Autor / Especialista", name: "author", widget: "string", default: "Equipo Legaliza Tu Agua" }
+      - { label: "Imagen Ilustrativa", name: "image", widget: "image", required: false }
+      - { label: "Resumen (Excerpt)", name: "excerpt", widget: "text" }
+      - { label: "Contenido Completo", name: "content", widget: "markdown" }
+      - { label: "Destacado en Portada", name: "featured", widget: "boolean", default: false, required: false }
+      - { label: "Estado", name: "status", widget: "select", options: ["published", "draft"], default: "published" }
+
+  # 3. EQUIPO
+  - name: "equipo"
+    label: "Equipo Profesional"
+    label_singular: "Miembro del Equipo"
+    folder: "src/content/equipo"
+    extension: "json"
+    format: "json"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nombre Completo", name: "name", widget: "string" }
+      - { label: "Identificador (Slug)", name: "slug", widget: "string" }
+      - { label: "Cargo / Rol", name: "role", widget: "string" }
+      - { label: "Biografía y Trayectoria", name: "bio", widget: "text" }
+      - { label: "Fotografía", name: "image", widget: "image", required: false }
+      - { label: "Correo Electrónico", name: "email", widget: "string", required: false }
+      - { label: "LinkedIn URL", name: "linkedin", widget: "string", required: false }
+      - { label: "Orden", name: "order", widget: "number", default: 1, value_type: "int" }
+      - { label: "Estado", name: "status", widget: "select", options: ["published", "draft"], default: "published" }
+
+  # 4. RECURSOS (NORMATIVA Y DOCUMENTOS)
+  - name: "recursos"
+    label: "Normativa y documentos"
+    label_singular: "Documento / Normativa"
+    folder: "src/content/recursos"
+    extension: "json"
+    format: "json"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título del Recurso", name: "title", widget: "string" }
+      - { label: "Identificador (Slug)", name: "slug", widget: "string" }
+      - { label: "Categoría", name: "category", widget: "select", options: ["Leyes y Decretos", "Formularios Oficiales DGA", "Guías y Manuales", "Jurisprudencia"] }
+      - { label: "Descripción", name: "description", widget: "text" }
+      - { label: "Archivo Descargable", name: "fileUrl", widget: "file", required: false }
+      - { label: "Enlace Externo Oficial", name: "externalUrl", widget: "string", required: false }
+      - { label: "Tipo de Documento", name: "fileType", widget: "select", options: ["PDF", "DOCX", "Enlace Oficial", "Planilla Excel"], default: "PDF" }
+      - { label: "Fecha de Actualización", name: "date", widget: "string", default: "2026" }
+      - { label: "Estado", name: "status", widget: "select", options: ["published", "draft"], default: "published" }
+
+  # 5. CONFIGURACIÓN DEL SITIO
+  - name: "configuracion"
+    label: "Configuración del Sitio"
+    delete: false
+    files:
+      - name: "general"
+        label: "Información General y Contacto"
+        file: "src/content/config/general.json"
+        fields:
+          - { label: "Nombre del Sitio", name: "siteTitle", widget: "string", default: "Legaliza Tu Agua" }
+          - { label: "Lema / Subtítulo", name: "tagline", widget: "string", default: "Especialistas en Derecho de Aguas y Gestión Hídrica" }
+          - { label: "Descripción SEO", name: "siteDescription", widget: "text" }
+          - { label: "Teléfono de Contacto", name: "phone", widget: "string", default: "+56 9 9411 2293" }
+          - { label: "WhatsApp Número", name: "whatsapp", widget: "string", default: "+56 9 9411 2293" }
+          - { label: "WhatsApp Mensaje Predeterminado", name: "whatsappMessage", widget: "string", default: "Hola, llegué desde el sitio web de Legaliza Tu Agua. Me gustaría solicitar información sobre una asesoría en Derecho de Aguas." }
+          - { label: "Correo Electrónico Oficial", name: "email", widget: "string", default: "contacto@legalizatuagua.cl" }
+          - { label: "Dirección de la Oficina", name: "address", widget: "string", default: "Viña del Mar, Chile" }
+          - { label: "Horario de Atención", name: "schedule", widget: "string", default: "Lunes a Viernes de 09:00 a 18:30 hrs" }

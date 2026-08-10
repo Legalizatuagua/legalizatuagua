@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos globales y reset */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* Offset para el header fijo */
+  background-color: #061A33;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  background-color: #061A33;
+  color: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-editorial {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.font-dm-sans {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.font-lydian {
+  font-family: 'Lydian', sans-serif;
+}
+
+.font-signature {
+  font-family: 'Caveat', cursive;
+}
+
+@keyframes slowPan {
+  0% { transform: scale(1.06) translate(0%, 0%); }
+  100% { transform: scale(1.06) translate(-4%, 1.5%); }
+}
+
+.animate-slow-pan {
+  animation: slowPan 25s ease-in-out infinite alternate;
+}
+
+/* Scrollbar sutil y premium */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #061A33;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00A6D6;
+  border-radius: 4px;
+  border: 2px solid #061A33;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #60C5E8;
+}
+
+/* Animaciones personalizadas */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Efectos de ruido SVG */
+.noise-overlay {
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
