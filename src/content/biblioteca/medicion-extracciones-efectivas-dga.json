@@ -1,0 +1,13 @@
+{
+  "slug": "medicion-extracciones-efectivas-dga",
+  "title": "Nuevas normativas de medición y fiscalización de la DGA",
+  "category": "Noticias",
+  "date": "01 Jun 2026",
+  "readingTime": "5 min",
+  "author": "Equipo Legaliza Tu Agua",
+  "image": "",
+  "excerpt": "Requisitos de instalación, calibración y transmisión telemática de sistemas de monitoreo de extracciones de aguas exigidos por la autoridad.",
+  "content": "\n      <h2>El Sistema de Monitoreo de Extracciones Efectivas (MME)</h2>\n      <p>La DGA ha emitido diversas resoluciones que obligan a los titulares de derechos de aprovechamiento de aguas subterráneas y superficiales a instalar flujómetros, sensores de nivel freático y componentes de transmisión telemática directa.</p>\n\n      <h2>Categorías de exigencia según caudal</h2>\n      <p>Las exigencias varían según el tramo de extracción:</p>\n      <ul>\n        <li><strong>Estándar Muy Pequeño y Pequeño:</strong> Registro manual periódico y envío digital mensual.</li>\n        <li><strong>Estándar Medio:</strong> Medición electrónica con almacenamiento de datos y transmisión periódica.</li>\n        <li><strong>Estándar Mayor y General:</strong> Telemetría en tiempo real con conexión automática al servidor central de la DGA.</li>\n      </ul>\n\n      <h2>Sanciones por incumplimiento</h2>\n      <p>No contar con el sistema instalado o no transmitir los datos en los plazos fijados constituye una infracción gravísima con multas directas aplicadas por la DGA.</p>\n    ",
+  "featured": false,
+  "status": "published"
+}
