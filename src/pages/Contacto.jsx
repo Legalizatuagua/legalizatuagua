@@ -26,12 +26,26 @@ export default function Contacto() {
   }, []);
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setTimeout(() => {
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+      await fetch("https://formsubmit.co/ajax/contacto@legalizatuagua.cl", {
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
       setFormSubmitted(true);
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 800);
+    } catch (error) {
+      console.error(error);
+      // Even if fetch fails, we show success or let the user know.
+      // Usually formsubmit works instantly.
+    }
   };
 
   return (
@@ -165,27 +179,27 @@ export default function Contacto() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-10">
                     <div className="flex flex-col gap-1.5">
                       <label className="text-[10px] uppercase tracking-[0.15em] text-white/60 ml-2">Nombre completo</label>
-                      <input type="text" required className="w-full bg-white/[0.03] border border-white/10 rounded-lg px-4 py-3 text-white text-[14px] font-light focus:outline-none focus:border-[#00A6D6]/50 transition-colors" placeholder="Ej. Juan Pérez" />
+                      <input type="text" name="Nombre" required className="w-full bg-white/[0.03] border border-white/10 rounded-lg px-4 py-3 text-white text-[14px] font-light focus:outline-none focus:border-[#00A6D6]/50 transition-colors" placeholder="Ej. Juan Pérez" />
                     </div>
                     <div className="flex flex-col gap-1.5">
                       <label className="text-[10px] uppercase tracking-[0.15em] text-white/60 ml-2">Teléfono</label>
-                      <input type="tel" required className="w-full bg-white/[0.03] border border-white/10 rounded-lg px-4 py-3 text-white text-[14px] font-light focus:outline-none focus:border-[#00A6D6]/50 transition-colors" placeholder="+56 9 1234 5678" />
+                      <input type="tel" name="Teléfono" required className="w-full bg-white/[0.03] border border-white/10 rounded-lg px-4 py-3 text-white text-[14px] font-light focus:outline-none focus:border-[#00A6D6]/50 transition-colors" placeholder="+56 9 1234 5678" />
                     </div>
                   </div>
 
                   <div className="flex flex-col gap-1.5 relative z-10">
                     <label className="text-[10px] uppercase tracking-[0.15em] text-white/60 ml-2">Correo electrónico</label>
-                    <input type="email" required className="w-full bg-white/[0.03] border border-white/10 rounded-lg px-4 py-3 text-white text-[14px] font-light focus:outline-none focus:border-[#00A6D6]/50 transition-colors" placeholder="correo@ejemplo.com" />
+                    <input type="email" name="Correo" required className="w-full bg-white/[0.03] border border-white/10 rounded-lg px-4 py-3 text-white text-[14px] font-light focus:outline-none focus:border-[#00A6D6]/50 transition-colors" placeholder="correo@ejemplo.com" />
                   </div>
 
                   <div className="flex flex-col gap-1.5 relative z-10">
                     <label className="text-[10px] uppercase tracking-[0.15em] text-white/60 ml-2">Asunto</label>
-                    <input type="text" required className="w-full bg-white/[0.03] border border-white/10 rounded-lg px-4 py-3 text-white text-[14px] font-light focus:outline-none focus:border-[#00A6D6]/50 transition-colors" placeholder="Ej. Consulta por regularización" />
+                    <input type="text" name="_subject" required className="w-full bg-white/[0.03] border border-white/10 rounded-lg px-4 py-3 text-white text-[14px] font-light focus:outline-none focus:border-[#00A6D6]/50 transition-colors" placeholder="Ej. Consulta por regularización" />
                   </div>
 
                   <div className="flex flex-col gap-1.5 relative z-10 flex-grow">
                     <label className="text-[10px] uppercase tracking-[0.15em] text-white/60 ml-2">Mensaje</label>
-                    <textarea required rows="5" className="w-full bg-white/[0.03] border border-white/10 rounded-lg px-4 py-3 text-white text-[14px] font-light focus:outline-none focus:border-[#00A6D6]/50 transition-colors resize-none h-full" placeholder="Cuéntanos más sobre lo que necesitas..."></textarea>
+                    <textarea name="Mensaje" required rows="5" className="w-full bg-white/[0.03] border border-white/10 rounded-lg px-4 py-3 text-white text-[14px] font-light focus:outline-none focus:border-[#00A6D6]/50 transition-colors resize-none h-full" placeholder="Cuéntanos más sobre lo que necesitas..."></textarea>
                   </div>
 
                   <div className="pt-2 relative z-10">

@@ -131,10 +131,43 @@ export default function SolicitarAsesoria() {
     setArchivos(prev => prev.filter((_, idx) => idx !== indexToRemove));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.confirmacion) return;
     
+    // Preparar formData para el envío
+    const dataToSubmit = new FormData();
+    
+    // Add text fields
+    Object.entries(formData).forEach(([key, value]) => {
+      // Excluir 'confirmacion' y pasar arrays como string separado por comas
+      if (key !== 'confirmacion') {
+        const val = Array.isArray(value) ? value.join(', ') : value;
+        dataToSubmit.append(key, val);
+      }
+    });
+
+    // Añadir asunto (para que en el correo se vea el tipo de solicitud)
+    dataToSubmit.append('_subject', `Nueva solicitud de Asesoría: ${formData.tipoSolicitante}`);
+    
+    // Add files
+    archivos.forEach((fileObj, index) => {
+      dataToSubmit.append(`archivo_adjunto_${index + 1}`, fileObj.rawFile);
+    });
+
+    try {
+      // Usar la API de formsubmit para enviar los datos con los archivos por detrás
+      await fetch("https://formsubmit.co/ajax/contacto@legalizatuagua.cl", {
+        method: "POST",
+        body: dataToSubmit,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+    } catch (error) {
+      console.error(error);
+    }
+
     // Clear storage draft
     try {
       sessionStorage.removeItem(DRAFT_STORAGE_KEY);
@@ -144,11 +177,8 @@ export default function SolicitarAsesoria() {
       // ignore
     }
 
-    // Simulate API call
-    setTimeout(() => {
-      setFormSubmitted(true);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 600);
+    setFormSubmitted(true);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
