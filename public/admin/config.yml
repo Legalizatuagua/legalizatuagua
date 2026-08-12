@@ -1,9 +1,10 @@
 backend:
   name: github
-  repo: pauli/legaliza-tu-agua
+  repo: Legalizatuagua/legalizatuagua
   branch: main
-  base_url: https://pauli.github.io
-  auth_endpoint: auth
+  # Usaremos PKCE (Autenticación directa con GitHub sin servidor intermedio)
+  # Necesitaremos poner el Client ID aquí:
+  app_id: Ov23li9U27LGvTur8kjf
 
 local_backend: true
 

@@ -162,7 +162,10 @@ export default function Navbar({ activeRoute, setRoute }) {
 
       {/* Mobile navigation drawer overlay */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed top-[73px] left-0 w-full h-[calc(100vh-73px)] bg-[#061A33]/98 backdrop-blur-lg z-40 border-t border-white/5 flex flex-col p-8 gap-6 animate-fade-in">
+        <div 
+          onClick={() => setMobileMenuOpen(false)}
+          className="lg:hidden fixed top-[73px] left-0 w-full h-[calc(100vh-73px)] bg-[#061A33]/98 backdrop-blur-lg z-40 border-t border-white/5 flex flex-col p-8 gap-6 animate-fade-in"
+        >
           {navLinks.map((link) => (
             <a
               key={link.route}
