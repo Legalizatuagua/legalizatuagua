@@ -2,9 +2,9 @@ backend:
   name: github
   repo: Legalizatuagua/legalizatuagua
   branch: main
-  # Usaremos PKCE (Autenticación directa con GitHub sin servidor intermedio)
-  # Necesitaremos poner el Client ID aquí:
-  app_id: Ov23li9U27LGvTur8kjf
+  # Usaremos un servidor de autenticación propio creado en Cloudflare Pages
+  base_url: https://legalizatuagua.cl
+  auth_endpoint: api/auth
 
 local_backend: true
 
