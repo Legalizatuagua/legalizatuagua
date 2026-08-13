@@ -8,6 +8,8 @@ import SolicitarAsesoria from './pages/SolicitarAsesoria';
 import Contacto from './pages/Contacto';
 import PalabrasFundador from './pages/PalabrasFundador';
 import Servicios from './pages/Servicios';
+import PoliticaPrivacidad from './pages/PoliticaPrivacidad';
+import TerminosCondiciones from './pages/TerminosCondiciones';
 
 import Footer from './components/Footer';
 import SiteHeader from './components/SiteHeader';
@@ -32,6 +34,8 @@ const getRouteState = () => {
   if (hash.startsWith('#/contacto')) return { route: 'contacto', param: null };
   if (hash.startsWith('#/fundador')) return { route: 'fundador', param: null };
   if (hash.startsWith('#/servicios')) return { route: 'servicios', param: null };
+  if (hash.startsWith('#/politica-de-privacidad')) return { route: 'politica', param: null };
+  if (hash.startsWith('#/terminos-y-condiciones')) return { route: 'terminos', param: null };
   return { route: 'home', param: null };
 };
 
@@ -75,6 +79,8 @@ export default function App() {
         {route === 'contacto' && <Contacto />}
         {route === 'fundador' && <PalabrasFundador />}
         {route === 'servicios' && <Servicios />}
+        {route === 'politica' && <PoliticaPrivacidad />}
+        {route === 'terminos' && <TerminosCondiciones />}
         {route === 'home' && <Home />}
       </main>
 

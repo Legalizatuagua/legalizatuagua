@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 import AnimatedBorders from '../components/AnimatedBorders';
 import waterDark from '../assets/water_dark.jpg';
 import { getArticleBySlug, getRelatedArticles } from '../data/articulosData';
@@ -227,8 +229,9 @@ export default function ArticuloDetalle({ slug }) {
         >
           <div 
             className="article-body font-sans text-white/85 text-[14px] sm:text-[15.5px] leading-[1.8] font-light flex flex-col gap-6"
-            dangerouslySetInnerHTML={{ __html: article.content }}
-          />
+          >
+            <ReactMarkdown rehypePlugins={[rehypeRaw]}>{article.content}</ReactMarkdown>
+          </div>
 
           <style>{`
             .article-body h2 {

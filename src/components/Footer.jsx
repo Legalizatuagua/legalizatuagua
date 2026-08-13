@@ -145,8 +145,8 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left font-sans text-white/40 text-[9px] lg:text-[10px] font-light">
           <p>© {new Date().getFullYear()} {config.siteName || 'LegalizaTuAgua'}. Todos los derechos reservados.</p>
           <div className="flex items-center gap-6">
-            <a href="#" className="hover:text-[#00A6D6] transition-colors">Política de Privacidad</a>
-            <a href="#" className="hover:text-[#00A6D6] transition-colors">Términos y Condiciones</a>
+            <a href="#/politica-de-privacidad" className="hover:text-[#00A6D6] transition-colors">Política de Privacidad</a>
+            <a href="#/terminos-y-condiciones" className="hover:text-[#00A6D6] transition-colors">Términos y Condiciones</a>
           </div>
         </div>
 

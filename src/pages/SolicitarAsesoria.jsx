@@ -140,45 +140,48 @@ export default function SolicitarAsesoria() {
     
     // Add text fields
     Object.entries(formData).forEach(([key, value]) => {
-      // Excluir 'confirmacion' y pasar arrays como string separado por comas
       if (key !== 'confirmacion') {
         const val = Array.isArray(value) ? value.join(', ') : value;
         dataToSubmit.append(key, val);
       }
     });
 
-    // Añadir asunto (para que en el correo se vea el tipo de solicitud)
+    // Añadir campos especiales de FormSubmit
     dataToSubmit.append('_subject', `Nueva solicitud de Asesoría: ${formData.tipoSolicitante}`);
-    
-    // Add files
+    dataToSubmit.append('_captcha', 'false');
+    dataToSubmit.append('_next', ''); // Evitar que envíe links raros por defecto
+
+    // Add files con nombres específicos que FormSubmit reconoce
     archivos.forEach((fileObj, index) => {
-      dataToSubmit.append(`archivo_adjunto_${index + 1}`, fileObj.rawFile);
+      const fieldName = index === 0 ? 'attachment' : `attachment_${index + 1}`;
+      dataToSubmit.append(fieldName, fileObj.rawFile);
     });
 
     try {
-      // Usar la API de formsubmit para enviar los datos con los archivos por detrás
-      await fetch("https://formsubmit.co/ajax/contacto@legalizatuagua.cl", {
+      // Usamos el endpoint principal (SIN /ajax/) usando modo no-cors
+      // Esto hace que el navegador lo envíe como un form normal,
+      // adjuntando los archivos, y evitando errores de CORS.
+      await fetch("https://formsubmit.co/contacto@legalizatuagua.cl", {
         method: "POST",
         body: dataToSubmit,
-        headers: {
-          'Accept': 'application/json'
-        }
+        mode: "no-cors"
       });
     } catch (error) {
-      console.error(error);
+      console.error("Error al enviar el formulario:", error);
     }
 
-    // Clear storage draft
-    try {
-      sessionStorage.removeItem(DRAFT_STORAGE_KEY);
-      localStorage.removeItem(DRAFT_STORAGE_KEY);
-      sessionStorage.removeItem(DRAFT_FILES_KEY);
-    } catch {
-      // ignore
-    }
-
-    setFormSubmitted(true);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Mostrar éxito y limpiar storage
+    setTimeout(() => {
+      try {
+        sessionStorage.removeItem(DRAFT_STORAGE_KEY);
+        localStorage.removeItem(DRAFT_STORAGE_KEY);
+        sessionStorage.removeItem(DRAFT_FILES_KEY);
+      } catch {
+        // ignore
+      }
+      setFormSubmitted(true);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 400);
   };
 
   return (
@@ -250,8 +253,11 @@ export default function SolicitarAsesoria() {
 
           {!formSubmitted ? (
             /* FORMULARIO */
-            <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-              
+            <>
+              <form 
+                onSubmit={handleSubmit} 
+                className="flex flex-col gap-6"
+              >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6"
                 style={{
                   opacity: contentEntered ? 1 : 0,
@@ -499,7 +505,7 @@ export default function SolicitarAsesoria() {
                           <option value="Baja" className="bg-[#020A14]">Baja</option>
                           <option value="Media" className="bg-[#020A14]">Media</option>
                           <option value="Alta" className="bg-[#020A14]">Alta</option>
-                          <option value="Urgente" className="bg-[#020A14]">Urgente</option>
+
                         </select>
                         <div className="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none text-white/50">
                           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M6 9l6 6 6-6"/></svg>
@@ -542,6 +548,7 @@ export default function SolicitarAsesoria() {
                 </div>
               </div>
             </form>
+            </>
           ) : (
             /* SUCCESS VIEW (Recuadro 25% más compacto, centrado vertical y horizontalmente) */
             <div 
