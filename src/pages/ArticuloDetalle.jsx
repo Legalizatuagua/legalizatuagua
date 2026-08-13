@@ -228,7 +228,7 @@ export default function ArticuloDetalle({ slug }) {
           }}
         >
           <div 
-            className="article-body font-sans text-white/85 text-[14px] sm:text-[15.5px] leading-[1.8] font-light flex flex-col gap-6"
+            className="article-body font-sans text-white/85 text-[14px] sm:text-[15.5px] leading-[1.8] font-light flex flex-col gap-6 break-words"
           >
             <ReactMarkdown rehypePlugins={[rehypeRaw]}>{article.content}</ReactMarkdown>
           </div>
