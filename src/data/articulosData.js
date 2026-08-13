@@ -316,18 +316,6 @@ Cuando una zona presenta una severa sequía, el Ministerio de Obras Públicas pu
 
 // Helper functions for easy querying
 function getStoredBiblioteca() {
-  if (typeof window === 'undefined') return ARTICULOS_DATA;
-  try {
-    const raw = localStorage.getItem('legalizatuagua_cms_store_v2') || localStorage.getItem('legalizatuagua_cms_store_v1');
-    if (raw) {
-const parsed = JSON.parse(raw);
-if (Array.isArray(parsed.biblioteca) && parsed.biblioteca.length > 0) {
-  return parsed.biblioteca;
-}
-    }
-  } catch (e) {
-    console.error('Error reading biblioteca from localStorage:', e);
-  }
   return ARTICULOS_DATA;
 }
 
