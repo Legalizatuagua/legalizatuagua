@@ -6,7 +6,7 @@ export default function PoliticaPrivacidad() {
   const [contentEntered, setContentEntered] = useState(false);
 
   useEffect(() => {
-    document.title = "Política de Privacidad - Legaliza Tu Agua";
+    document.title = "Política de Privacidad - LegalizaTuAgua";
     window.scrollTo({ top: 0, behavior: 'instant' });
     
     const enterTimer = setTimeout(() => {
@@ -72,7 +72,7 @@ export default function PoliticaPrivacidad() {
           <div className="flex flex-col gap-6 text-white/85 text-[14px] sm:text-[15.5px] leading-[1.8] font-light text-justify">
             
             <p>
-              En <strong>Legaliza Tu Agua</strong>, valoramos su privacidad y nos comprometemos a proteger sus datos personales en estricto cumplimiento con la Ley Nº 19.628 sobre Protección de la Vida Privada vigente en Chile.
+              En <strong>LegalizaTuAgua</strong>, valoramos su privacidad y nos comprometemos a proteger sus datos personales en estricto cumplimiento con la Ley Nº 19.628 sobre Protección de la Vida Privada vigente en Chile.
             </p>
 
             <h2 className="font-dm-sans text-white text-xl font-medium mt-4 uppercase border-b border-white/10 pb-2">1. Recopilación de Información</h2>
@@ -97,7 +97,7 @@ export default function PoliticaPrivacidad() {
 
             <h2 className="font-dm-sans text-white text-xl font-medium mt-4 uppercase border-b border-white/10 pb-2">4. Compartir Información con Terceros</h2>
             <p>
-              Legaliza Tu Agua no vende, alquila ni comercializa su información personal a terceros. Únicamente compartiremos sus datos cuando sea estrictamente necesario para la prestación del servicio contratado (por ejemplo, presentaciones ante la Dirección General de Aguas o Conservadores de Bienes Raíces), y siempre bajo su autorización expresa.
+              LegalizaTuAgua no vende, alquila ni comercializa su información personal a terceros. Únicamente compartiremos sus datos cuando sea estrictamente necesario para la prestación del servicio contratado (por ejemplo, presentaciones ante la Dirección General de Aguas o Conservadores de Bienes Raíces), y siempre bajo su autorización expresa.
             </p>
 
             <h2 className="font-dm-sans text-white text-xl font-medium mt-4 uppercase border-b border-white/10 pb-2">5. Derechos del Titular (Derechos ARCO)</h2>

@@ -6,7 +6,7 @@ export default function TerminosCondiciones() {
   const [contentEntered, setContentEntered] = useState(false);
 
   useEffect(() => {
-    document.title = "Términos y Condiciones - Legaliza Tu Agua";
+    document.title = "Términos y Condiciones - LegalizaTuAgua";
     window.scrollTo({ top: 0, behavior: 'instant' });
     
     const enterTimer = setTimeout(() => {
@@ -72,7 +72,7 @@ export default function TerminosCondiciones() {
           <div className="flex flex-col gap-6 text-white/85 text-[14px] sm:text-[15.5px] leading-[1.8] font-light text-justify">
             
             <p>
-              Bienvenido al sitio web de <strong>Legaliza Tu Agua</strong>. Al acceder y utilizar este sitio web, usted acepta cumplir y estar sujeto a los siguientes Términos y Condiciones de uso.
+              Bienvenido al sitio web de <strong>LegalizaTuAgua</strong>. Al acceder y utilizar este sitio web, usted acepta cumplir y estar sujeto a los siguientes Términos y Condiciones de uso.
             </p>
 
             <h2 className="font-dm-sans text-white text-xl font-medium mt-4 uppercase border-b border-white/10 pb-2">1. Uso del Sitio Web</h2>
