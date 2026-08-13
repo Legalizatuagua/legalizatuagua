@@ -5,7 +5,6 @@ import AnimatedBorders from '../components/AnimatedBorders';
 import '../index.css';
 
 const DRAFT_STORAGE_KEY = 'legaliza_asesoria_draft_v1';
-const DRAFT_FILES_KEY = 'legaliza_asesoria_files_meta_v1';
 
 const getInitialFormData = () => {
   const defaults = {
@@ -39,23 +38,10 @@ const getInitialFormData = () => {
 export default function SolicitarAsesoria() {
   const [contentEntered, setContentEntered] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [archivos, setArchivos] = useState(() => {
-    try {
-      const savedFiles = sessionStorage.getItem(DRAFT_FILES_KEY);
-      if (savedFiles) {
-        return JSON.parse(savedFiles);
-      }
-    } catch {
-      // ignore
-    }
-    return [];
-  });
-
   // Form State initialized with draft persistence
   const [formData, setFormData] = useState(getInitialFormData);
 
   const scrollContainerRef = useRef(null);
-  const fileInputRef = useRef(null);
 
   // Auto-save form data to storage on any change
   useEffect(() => {
@@ -69,16 +55,7 @@ export default function SolicitarAsesoria() {
     }
   }, [formData, formSubmitted]);
 
-  // Auto-save files metadata to storage
-  useEffect(() => {
-    if (formSubmitted) return;
-    try {
-      const meta = archivos.map(f => ({ name: f.name, size: f.size, type: f.type }));
-      sessionStorage.setItem(DRAFT_FILES_KEY, JSON.stringify(meta));
-    } catch {
-      // ignore
-    }
-  }, [archivos, formSubmitted]);
+
 
   useEffect(() => {
     document.title = "Solicitar Asesoría - Legaliza Tu Agua";
@@ -111,25 +88,7 @@ export default function SolicitarAsesoria() {
     });
   };
 
-  const handleFileChange = (e) => {
-    e.stopPropagation();
-    if (e.target.files && e.target.files.length > 0) {
-      const newFiles = Array.from(e.target.files).map(file => ({
-        name: file.name,
-        size: file.size,
-        type: file.type,
-        lastModified: file.lastModified,
-        rawFile: file
-      }));
-      setArchivos(prev => [...prev, ...newFiles]);
-      // Reset input value so same file can be re-selected if needed
-      e.target.value = '';
-    }
-  };
 
-  const handleRemoveFile = (indexToRemove) => {
-    setArchivos(prev => prev.filter((_, idx) => idx !== indexToRemove));
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -149,22 +108,14 @@ export default function SolicitarAsesoria() {
     // Añadir campos especiales de FormSubmit
     dataToSubmit.append('_subject', `Nueva solicitud de Asesoría: ${formData.tipoSolicitante}`);
     dataToSubmit.append('_captcha', 'false');
-    dataToSubmit.append('_next', ''); // Evitar que envíe links raros por defecto
-
-    // Add files con nombres específicos que FormSubmit reconoce
-    archivos.forEach((fileObj, index) => {
-      const fieldName = index === 0 ? 'attachment' : `attachment_${index + 1}`;
-      dataToSubmit.append(fieldName, fileObj.rawFile);
-    });
 
     try {
-      // Usamos el endpoint principal (SIN /ajax/) usando modo no-cors
-      // Esto hace que el navegador lo envíe como un form normal,
-      // adjuntando los archivos, y evitando errores de CORS.
-      await fetch("https://formsubmit.co/contacto@legalizatuagua.cl", {
+      await fetch("https://formsubmit.co/ajax/contacto@legalizatuagua.cl", {
         method: "POST",
         body: dataToSubmit,
-        mode: "no-cors"
+        headers: {
+          'Accept': 'application/json'
+        }
       });
     } catch (error) {
       console.error("Error al enviar el formulario:", error);
@@ -175,7 +126,6 @@ export default function SolicitarAsesoria() {
       try {
         sessionStorage.removeItem(DRAFT_STORAGE_KEY);
         localStorage.removeItem(DRAFT_STORAGE_KEY);
-        sessionStorage.removeItem(DRAFT_FILES_KEY);
       } catch {
         // ignore
       }
@@ -430,54 +380,17 @@ export default function SolicitarAsesoria() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 relative z-10 mb-5">
-                  {/* Adjuntar con Visualización de Archivos */}
-                  <div className="flex flex-col gap-2">
-                    <h3 className="font-dm-sans text-white text-[13px] font-medium flex items-center gap-2">Documentos (Opcional)</h3>
-                    <div 
-                      onClick={() => fileInputRef.current && fileInputRef.current.click()}
-                      className="relative border border-dashed border-white/20 rounded-lg p-3.5 flex items-center justify-center gap-3.5 hover:border-[#00A6D6]/50 hover:bg-[#00A6D6]/5 transition-all duration-300 group cursor-pointer"
-                    >
-                      <div className="text-white/40 group-hover:text-[#00A6D6] transition-colors pointer-events-none">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+                  {/* Documentación Adicional (Aviso) */}
+                  <div className="flex flex-col gap-2 justify-center h-full pt-1">
+                    <h3 className="font-dm-sans text-white text-[13px] font-medium flex items-center gap-2">Documentos Adicionales</h3>
+                    <div className="bg-[#00A6D6]/5 border border-[#00A6D6]/20 rounded-lg p-3.5 flex items-start gap-3">
+                      <div className="mt-0.5 text-[#00A6D6]">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
                       </div>
-                      <div className="flex flex-col text-left pointer-events-none">
-                        <span className="text-[11px] font-medium text-[#00A6D6] uppercase tracking-[0.1em]">Subir archivo</span>
-                        <span className="text-[10px] font-light text-white/40">PDF, JPG, PNG (Max 10MB)</span>
-                      </div>
-                      <input 
-                        ref={fileInputRef}
-                        type="file" 
-                        id="asesoria-file-input"
-                        onClick={(e) => e.stopPropagation()}
-                        onChange={handleFileChange}
-                        className="absolute inset-0 w-full h-full opacity-0 cursor-pointer" 
-                        multiple 
-                        accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"
-                      />
+                      <p className="text-[12px] font-light text-white/70 leading-relaxed">
+                        Si tu consulta requiere documentación adicional, te contactaremos para coordinar el envío de los antecedentes.
+                      </p>
                     </div>
-
-                    {/* Lista de archivos adjuntos visibles */}
-                    {archivos.length > 0 && (
-                      <div className="flex flex-col gap-1.5 mt-2">
-                        {archivos.map((file, idx) => (
-                          <div key={idx} className="flex items-center justify-between bg-white/[0.04] border border-[#00A6D6]/30 rounded-lg px-3 py-1.5 text-[11px] text-white/90 animate-fade-in">
-                            <div className="flex items-center gap-2 overflow-hidden">
-                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00A6D6" strokeWidth="2" className="shrink-0"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                              <span className="truncate max-w-[180px] sm:max-w-[240px] font-light">{file.name}</span>
-                              <span className="text-white/40 text-[10px]">({(file.size / 1024).toFixed(0)} KB)</span>
-                            </div>
-                            <button 
-                              type="button" 
-                              onClick={() => handleRemoveFile(idx)}
-                              className="text-white/40 hover:text-red-400 p-1 transition-colors"
-                              title="Eliminar archivo"
-                            >
-                              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-                            </button>
-                          </div>
-                        ))}
-                      </div>
-                    )}
                   </div>
 
                   {/* Preferencias */}
