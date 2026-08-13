@@ -284,7 +284,8 @@ export default function ArticuloDetalle({ slug }) {
               padding-left: 1.4rem;
               margin-bottom: 1.2rem;
               display: flex;
-              flex-col: gap: 0.5rem;
+              flex-direction: column;
+              gap: 0.5rem;
             }
             .article-body ul {
               list-style-type: disc;
