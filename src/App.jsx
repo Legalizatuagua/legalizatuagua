@@ -56,7 +56,11 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // Only scroll to top if not navigating to a specific section anchor
+    const hash = window.location.hash;
+    if (!hash || hash.startsWith('#/') || hash === '#inicio' || hash === '#portada') {
+      window.scrollTo(0, 0);
+    }
   }, [routeState]);
 
   const { route, param } = routeState;
