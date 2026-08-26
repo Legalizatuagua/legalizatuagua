@@ -17,13 +17,13 @@ export default function PoliticaPrivacidad() {
   }, []);
 
   return (
-    <div className="bg-[#041014] min-h-screen text-white overflow-x-hidden font-sans relative selection:bg-[#00A6D6]/30 selection:text-white pb-20">
+    <div className="bg-[#104050] min-h-screen text-white overflow-x-hidden font-sans relative selection:bg-[#00A6D6]/30 selection:text-white pb-20">
       
       {/* Backgrounds */}
       <div 
         className="fixed inset-0 z-0 pointer-events-none transition-opacity duration-1000"
         style={{
-          background: 'radial-gradient(circle at 50% 0%, #061A23 0%, #041014 60%, #02070A 100%)',
+          background: 'radial-gradient(circle at 50% 0%, #061A23 0%, #104050 60%, #0E3146 100%)',
           opacity: contentEntered ? 1 : 0
         }}
       />
@@ -38,7 +38,7 @@ export default function PoliticaPrivacidad() {
           alt="" 
           className="w-full h-full object-cover opacity-60 mix-blend-luminosity" 
         />
-        <div className="absolute inset-0 bg-[#041014]/70 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-[#104050]/70 mix-blend-multiply"></div>
       </div>
       
       <AnimatedBorders />
@@ -62,7 +62,7 @@ export default function PoliticaPrivacidad() {
         </header>
 
         <article 
-          className="bg-[#020A14]/80 backdrop-blur-[20px] border border-white/5 rounded-[24px] lg:rounded-[32px] p-6 sm:p-10 lg:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.4)] relative"
+          className="bg-[#082A55]/80 backdrop-blur-[20px] border border-white/5 rounded-[24px] lg:rounded-[32px] p-6 sm:p-10 lg:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.4)] relative"
           style={{
             opacity: contentEntered ? 1 : 0,
             transform: contentEntered ? 'translateY(0)' : 'translateY(20px)',

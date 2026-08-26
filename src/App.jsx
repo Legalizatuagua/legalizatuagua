@@ -68,7 +68,7 @@ export default function App() {
   // If in CMS admin dashboard, it will be handled by public/admin/index.html
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#061A33] text-white relative">
+    <div className="flex flex-col min-h-screen bg-[#0E3B73] text-white relative">
       {/* Noise filter background overlay */}
       <NoiseOverlay />
       

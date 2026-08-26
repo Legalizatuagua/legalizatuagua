@@ -28,12 +28,12 @@ export default function Blog() {
     : posts.filter(post => post.category === selectedCat);
 
   return (
-    <div className="bg-[#041014] min-h-screen text-white font-sans overflow-x-hidden relative selection:bg-[#00A6D6]/30 selection:text-white pt-[110px] lg:pt-[120px] pb-24">
+    <div className="bg-[#104050] min-h-screen text-white font-sans overflow-x-hidden relative selection:bg-[#00A6D6]/30 selection:text-white pt-[110px] lg:pt-[120px] pb-24">
       {/* Background Elements */}
       <div 
         className="fixed inset-0 z-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(circle at 50% 0%, #061A23 0%, #041014 60%, #02070A 100%)'
+          background: 'radial-gradient(circle at 50% 0%, #061A23 0%, #104050 60%, #0E3146 100%)'
         }}
       />
       <AnimatedBorders />
@@ -76,9 +76,9 @@ export default function Blog() {
           {filteredPosts.map((post) => (
             <article 
               key={post.id || post.slug} 
-              className="bg-[#020A14]/80 backdrop-blur-[16px] border border-white/10 rounded-[20px] overflow-hidden shadow-sm flex flex-col justify-between hover:border-[#00A6D6]/40 hover:bg-white/[0.04] transition-all duration-300 group"
+              className="bg-[#082A55]/80 backdrop-blur-[16px] border border-white/10 rounded-[20px] overflow-hidden shadow-sm flex flex-col justify-between hover:border-[#00A6D6]/40 hover:bg-white/[0.04] transition-all duration-300 group"
             >
-              <div className="h-44 bg-gradient-to-br from-[#061A23] to-[#020A14] relative overflow-hidden">
+              <div className="h-44 bg-gradient-to-br from-[#061A23] to-[#082A55] relative overflow-hidden">
                 {post.image ? (
                   <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 ) : (
@@ -129,7 +129,7 @@ export default function Blog() {
           onClick={() => setSelectedPost(null)}
         >
           <div 
-            className="bg-[#020A14] border border-white/20 rounded-2xl max-w-2xl w-full p-6 sm:p-8 max-h-[85vh] overflow-y-auto text-left relative shadow-2xl"
+            className="bg-[#082A55] border border-white/20 rounded-2xl max-w-2xl w-full p-6 sm:p-8 max-h-[85vh] overflow-y-auto text-left relative shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <button 

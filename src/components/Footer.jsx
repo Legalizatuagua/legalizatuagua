@@ -17,10 +17,10 @@ export default function Footer() {
   const whatsappUrl = `https://wa.me/${cleanPhone}`;
 
   return (
-    <footer className="w-full relative z-40 bg-[#020A14] overflow-hidden border-t border-white/5 pt-4 lg:pt-6 pb-2 selection:bg-[#00A6D6]/30 selection:text-white mt-auto">
+    <footer className="w-full relative z-40 bg-[#082A55] overflow-hidden border-t border-white/5 pt-4 lg:pt-6 pb-2 selection:bg-[#00A6D6]/30 selection:text-white mt-auto">
       {/* Backgrounds (Global styling) */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.15] mix-blend-screen bg-center bg-cover bg-no-repeat transition-opacity duration-1000" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/cubes.png")', backgroundSize: '120px 120px' }}></div>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_#041014_0%,_#020A14_100%)] opacity-95 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_#104050_0%,_#082A55_100%)] opacity-95 pointer-events-none"></div>
 
       <div className="w-full max-w-[1500px] mx-auto px-6 lg:px-12 relative z-20">
         
@@ -113,7 +113,7 @@ export default function Footer() {
               href="https://www.rumbolegal.cl/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col gap-1.5 p-3 rounded-xl bg-[#041014]/50 border border-[#00A6D6]/20 hover:-translate-y-1 hover:border-[#00A6D6]/50 transition-all duration-300 w-fit lg:w-full"
+              className="group flex flex-col gap-1.5 p-3 rounded-xl bg-[#104050]/50 border border-[#00A6D6]/20 hover:-translate-y-1 hover:border-[#00A6D6]/50 transition-all duration-300 w-fit lg:w-full"
             >
               <div className="flex items-center gap-2">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-[#00A6D6]">

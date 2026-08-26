@@ -254,7 +254,7 @@ export default function Home() {
   return (
     <div 
       ref={containerRef} 
-      className={`relative w-full bg-[#041014] ${!hasEntered ? 'h-screen overflow-hidden' : 'min-h-screen'} ${isDirectNav ? 'fast-nav' : ''}`}
+      className={`relative w-full bg-[#104050] ${!hasEntered ? 'h-screen overflow-hidden' : 'min-h-screen'} ${isDirectNav ? 'fast-nav' : ''}`}
     >
       {isDirectNav && (
         <style>{`
@@ -365,7 +365,7 @@ export default function Home() {
             }}
           >
             {/* Vertical mouse capsule */}
-            <div className="w-4 h-6 border border-white/20 rounded-full flex justify-center p-1 mb-2 bg-[#061A33]/10 backdrop-blur-[2px]">
+            <div className="w-4 h-6 border border-white/20 rounded-full flex justify-center p-1 mb-2 bg-[#0E3B73]/10 backdrop-blur-[2px]">
               <div className="w-[3px] h-[6px] bg-[#00A6D6]/80 rounded-full animate-bounce duration-[1500ms]" />
             </div>
             <span className="text-[8px] tracking-[0.3em] font-light uppercase text-white/40">
@@ -415,7 +415,7 @@ export default function Home() {
         <div className="relative z-30 w-full min-h-screen flex flex-col pointer-events-none">
            {/* HEADER */}
            <header id="inicio-content"
-             className="w-full px-8 lg:px-24 py-4 lg:py-8 flex justify-between items-center pointer-events-auto max-lg:bg-[#020A14] max-lg:border-b max-lg:border-white/10 relative z-50"
+             className="w-full px-8 lg:px-24 py-4 lg:py-8 flex justify-between items-center pointer-events-auto max-lg:bg-[#082A55] max-lg:border-b max-lg:border-white/10 relative z-50"
              style={{
                opacity: contentEntered ? 1 : 0,
                transform: contentEntered ? 'translateY(0)' : 'translateY(-20px)',
@@ -450,7 +450,7 @@ export default function Home() {
              </nav>
              
              <div className="hidden lg:block">
-               <a href="#/asesoria" className="flex items-center gap-2 bg-[#00A6D6] text-[#020A14] px-4 py-2 rounded-full text-[10px] font-medium tracking-[0.15em] uppercase hover:bg-[#00B8ED] transition-colors shadow-[0_0_15px_rgba(0,166,214,0.4)]">
+               <a href="#/asesoria" className="flex items-center gap-2 bg-[#00A6D6] text-[#082A55] px-4 py-2 rounded-full text-[10px] font-medium tracking-[0.15em] uppercase hover:bg-[#00B8ED] transition-colors shadow-[0_0_15px_rgba(0,166,214,0.4)]">
                  SOLICITAR ASESORÍA
                </a>
              </div>
@@ -486,7 +486,7 @@ export default function Home() {
             {/* Mobile Dropdown Menu */}
             {mobileMenuOpen && (
               <div 
-                className="lg:hidden fixed top-[65px] left-0 w-full z-[70] bg-[#020A14] border-b border-white/10 shadow-2xl transition-all duration-300 animate-fade-in pointer-events-auto"
+                className="lg:hidden fixed top-[65px] left-0 w-full z-[70] bg-[#082A55] border-b border-white/10 shadow-2xl transition-all duration-300 animate-fade-in pointer-events-auto"
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="flex flex-col py-4 px-6 gap-1 divide-y divide-white/5">
@@ -647,7 +647,7 @@ export default function Home() {
       {/* ------------------------------------------------------------- */}
       <section 
         id="nosotros"
-        className="w-full relative z-30 bg-[#041014] overflow-hidden pt-24 pb-12 lg:pb-32 px-4 sm:px-8 lg:px-12"
+        className="w-full relative z-30 bg-[#104050] overflow-hidden pt-24 pb-12 lg:pb-32 px-4 sm:px-8 lg:px-12"
         style={{
           opacity: contentEntered ? 1 : 0,
           transition: isDirectNav ? 'opacity 300ms ease-out' : 'opacity 1000ms ease-out 800ms'
@@ -660,9 +660,9 @@ export default function Home() {
             alt="" 
             className="w-full h-full object-cover opacity-60 animate-slow-pan mix-blend-luminosity" 
           />
-          <div className="absolute inset-0 bg-[#041014]/60 mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-[#104050]/60 mix-blend-multiply"></div>
           {/* Degradado hacia el footer */}
-          <div className="absolute inset-x-0 bottom-0 h-32 md:h-48 bg-gradient-to-t from-[#020A14] to-transparent lg:hidden"></div>
+          <div className="absolute inset-x-0 bottom-0 h-32 md:h-48 bg-gradient-to-t from-[#082A55] to-transparent lg:hidden"></div>
         </div>
 
         {/* Layout Container without visual styles */}
@@ -711,7 +711,7 @@ export default function Home() {
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-white/10"></div>
               </div>
-              <div className="relative bg-[#020A14] px-4">
+              <div className="relative bg-[#082A55] px-4">
                 <h4 className="font-dm-sans text-white/90 text-[11px] sm:text-[13px] font-medium tracking-[0.1em] uppercase">
                   NUESTRO COMPROMISO
                 </h4>
@@ -764,7 +764,7 @@ export default function Home() {
 
         {/* Access to Palabras del Fundador */}
         <div className="relative z-10 w-full max-w-[720px] mx-auto mt-6 sm:mt-8 px-4 sm:px-0">
-          <div className="bg-gradient-to-br from-[#020A14]/90 to-[#041A25]/90 backdrop-blur-[24px] border border-[#00A6D6]/30 rounded-[20px] lg:rounded-[28px] p-6 sm:p-7 lg:p-10 flex flex-col items-center text-center shadow-[0_20px_50px_rgba(0,166,214,0.15)] relative overflow-hidden group">
+          <div className="bg-gradient-to-br from-[#082A55]/90 to-[#0B4765]/90 backdrop-blur-[24px] border border-[#00A6D6]/30 rounded-[20px] lg:rounded-[28px] p-6 sm:p-7 lg:p-10 flex flex-col items-center text-center shadow-[0_20px_50px_rgba(0,166,214,0.15)] relative overflow-hidden group">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#00A6D6]/10 to-transparent pointer-events-none transition-opacity duration-700 group-hover:opacity-100 opacity-60"></div>
             
             <h3 className="font-dm-sans text-white/90 text-xl sm:text-2xl lg:text-[26px] font-medium tracking-wide mb-3 relative z-10 uppercase">
@@ -774,7 +774,7 @@ export default function Home() {
               Conoce la visión, experiencia y compromiso que han guiado a LegalizaTuAgua durante más de quince años.
             </p>
             
-            <a href="#/fundador" className="relative z-10 inline-flex items-center gap-2.5 bg-[#00A6D6] text-[#020A14] px-6 lg:px-7 py-2.5 lg:py-3 rounded-full text-[10px] lg:text-[11px] tracking-[0.15em] font-medium uppercase hover:bg-[#00B8ED] transition-all duration-300 shadow-[0_4px_15px_rgba(0,166,214,0.4)] hover:shadow-[0_8px_25px_rgba(0,166,214,0.5)] transform hover:-translate-y-0.5">
+            <a href="#/fundador" className="relative z-10 inline-flex items-center gap-2.5 bg-[#00A6D6] text-[#082A55] px-6 lg:px-7 py-2.5 lg:py-3 rounded-full text-[10px] lg:text-[11px] tracking-[0.15em] font-medium uppercase hover:bg-[#00B8ED] transition-all duration-300 shadow-[0_4px_15px_rgba(0,166,214,0.4)] hover:shadow-[0_8px_25px_rgba(0,166,214,0.5)] transform hover:-translate-y-0.5">
               Leer palabras del fundador
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -787,7 +787,7 @@ export default function Home() {
       {/* ------------------------------------------------------------- */}
       <section 
         id="servicios"
-        className="w-full relative z-30 bg-[#041014] overflow-hidden pt-12 lg:pt-24 pb-32 px-4 sm:px-8 lg:px-12"
+        className="w-full relative z-30 bg-[#104050] overflow-hidden pt-12 lg:pt-24 pb-32 px-4 sm:px-8 lg:px-12"
         style={{
           opacity: contentEntered ? 1 : 0,
           transition: isDirectNav ? 'opacity 300ms ease-out' : 'opacity 1000ms ease-out 1000ms'
@@ -800,7 +800,7 @@ export default function Home() {
             alt="" 
             className="w-full h-full object-cover opacity-60 animate-slow-pan mix-blend-luminosity" 
           />
-          <div className="absolute inset-0 bg-[#041014]/60 mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-[#104050]/60 mix-blend-multiply"></div>
         </div>
 
         {/* SERVICES CONTENT */}
@@ -819,7 +819,7 @@ export default function Home() {
                 Acompañamos a personas, agricultores, empresas y organizaciones de usuarios en todas las etapas relacionadas con los derechos de aprovechamiento de aguas. Conoce cómo podemos ayudarte según las necesidades de tu proyecto.
               </p>
               
-              <a href="#/servicios" className="inline-flex items-center gap-3 bg-transparent border border-[#00A6D6]/40 text-[#00A6D6] px-6 lg:px-8 py-3 lg:py-3.5 rounded-full text-[10px] lg:text-[11px] tracking-[0.15em] font-medium uppercase hover:bg-[#00A6D6] hover:text-[#020A14] transition-all duration-300 shadow-[0_4px_15px_rgba(0,166,214,0.1)] hover:shadow-[0_8px_25px_rgba(0,166,214,0.3)]">
+              <a href="#/servicios" className="inline-flex items-center gap-3 bg-transparent border border-[#00A6D6]/40 text-[#00A6D6] px-6 lg:px-8 py-3 lg:py-3.5 rounded-full text-[10px] lg:text-[11px] tracking-[0.15em] font-medium uppercase hover:bg-[#00A6D6] hover:text-[#082A55] transition-all duration-300 shadow-[0_4px_15px_rgba(0,166,214,0.1)] hover:shadow-[0_8px_25px_rgba(0,166,214,0.3)]">
                 Conocer todos los servicios
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
@@ -835,7 +835,7 @@ export default function Home() {
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
                 ];
                 return (
-                  <div key={srv.slug || srv.id || i} className="bg-[#020A14]/60 backdrop-blur-[16px] border border-white/5 rounded-[12px] lg:rounded-[30px] p-4 lg:p-6 shadow-[0_8px_32px_0_rgba(0,0,0,0.25)] relative overflow-hidden group flex flex-col sm:flex-row hover:bg-[#020A14]/80 transition-colors duration-500">
+                  <div key={srv.slug || srv.id || i} className="bg-[#082A55]/60 backdrop-blur-[16px] border border-white/5 rounded-[12px] lg:rounded-[30px] p-4 lg:p-6 shadow-[0_8px_32px_0_rgba(0,0,0,0.25)] relative overflow-hidden group flex flex-col sm:flex-row hover:bg-[#082A55]/80 transition-colors duration-500">
                     <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent pointer-events-none"></div>
                     
                     <div className="flex-1 flex flex-col justify-center relative z-10 sm:pr-6">
@@ -852,8 +852,8 @@ export default function Home() {
 
                     <div className="hidden sm:block sm:w-[35%] shrink-0 relative overflow-hidden h-auto rounded-[20px]">
                       <div className="absolute inset-0 bg-[#00A6D6]/10 mix-blend-overlay z-10 pointer-events-none transition-opacity duration-500 group-hover:opacity-0"></div>
-                      <div className="absolute inset-0 bg-gradient-to-l from-transparent to-[#020A14] z-10 hidden sm:block pointer-events-none"></div>
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#020A14] to-transparent z-10 sm:hidden pointer-events-none"></div>
+                      <div className="absolute inset-0 bg-gradient-to-l from-transparent to-[#082A55] z-10 hidden sm:block pointer-events-none"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#082A55] to-transparent z-10 sm:hidden pointer-events-none"></div>
                       <img src={srv.image || defaultImages[i % defaultImages.length]} alt={srv.title} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
                     </div>
                   </div>
@@ -877,7 +877,7 @@ export default function Home() {
       {/* ------------------------------------------------------------- */}
       <section 
         id="casos"
-        className="w-full relative z-30 bg-[#041014] overflow-hidden pt-24 pb-32 px-4 sm:px-8 lg:px-12"
+        className="w-full relative z-30 bg-[#104050] overflow-hidden pt-24 pb-32 px-4 sm:px-8 lg:px-12"
         style={{
           opacity: contentEntered ? 1 : 0,
           transition: isDirectNav ? 'opacity 300ms ease-out' : 'opacity 1000ms ease-out 1200ms'
@@ -890,7 +890,7 @@ export default function Home() {
             alt="" 
             className="w-full h-full object-cover opacity-60 animate-slow-pan mix-blend-luminosity" 
           />
-          <div className="absolute inset-0 bg-[#041014]/60 mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-[#104050]/60 mix-blend-multiply"></div>
         </div>
 
         {/* CONTENT */}
@@ -979,7 +979,7 @@ export default function Home() {
                 desc: "Gestión institucional que permitió obtener una carta de compromiso para la ampliación de la concesión sanitaria de Aguas Andinas, destrabando el desarrollo de un importante proyecto de vivienda social."
               }
             ].map((caso, i) => (
-              <div key={i} className="bg-[#020A14] backdrop-blur-[16px] border border-white/5 rounded-[16px] lg:rounded-[30px] flex flex-col shadow-[0_8px_32px_0_rgba(0,0,0,0.25)] relative overflow-hidden group hover:bg-white/[0.03] transition-colors duration-500">
+              <div key={i} className="bg-[#082A55] backdrop-blur-[16px] border border-white/5 rounded-[16px] lg:rounded-[30px] flex flex-col shadow-[0_8px_32px_0_rgba(0,0,0,0.25)] relative overflow-hidden group hover:bg-white/[0.03] transition-colors duration-500">
                 <div className="h-[100px] sm:h-[140px] lg:h-[220px] w-full overflow-hidden relative">
                   <div className="absolute inset-0 bg-[#00A6D6]/10 mix-blend-overlay z-10 transition-opacity duration-500 group-hover:opacity-0"></div>
                   <img src={caso.img} alt={caso.title} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" />
@@ -1048,7 +1048,7 @@ export default function Home() {
             <p className="text-white/60 font-sans text-[14px] lg:text-[16px] leading-[1.6] font-light mb-8 max-w-[500px] relative z-10 text-justify">
               Conversemos sobre cómo podemos ayudarte a proteger y gestionar tus derechos de agua.
             </p>
-            <a href="#/asesoria" className="inline-flex items-center justify-center gap-2 bg-[#00A6D6] text-[#020A14] px-8 py-3.5 rounded-full text-[11px] lg:text-[12px] tracking-[0.15em] font-medium uppercase hover:bg-[#00B8ED] transition-colors duration-300 shadow-[0_4px_15px_rgba(0,166,214,0.4)] relative z-10">
+            <a href="#/asesoria" className="inline-flex items-center justify-center gap-2 bg-[#00A6D6] text-[#082A55] px-8 py-3.5 rounded-full text-[11px] lg:text-[12px] tracking-[0.15em] font-medium uppercase hover:bg-[#00B8ED] transition-colors duration-300 shadow-[0_4px_15px_rgba(0,166,214,0.4)] relative z-10">
               Solicitar Asesoría
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>

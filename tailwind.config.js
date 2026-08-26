@@ -8,8 +8,8 @@ export default {
     extend: {
       colors: {
         primary: {
-          deep: '#0A2342',     /* Azul profundo */
-          navy: '#061A33',     /* Azul marino */
+          deep: '#134480',     /* Azul profundo (más luminoso) */
+          navy: '#0E3B73',     /* Azul marino (más luminoso) */
           light: '#EAF7FC',    /* Azul claro */
         },
         water: {

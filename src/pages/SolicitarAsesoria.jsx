@@ -135,7 +135,7 @@ export default function SolicitarAsesoria() {
   };
 
   return (
-    <div ref={scrollContainerRef} className="bg-[#041014] min-h-screen text-white overflow-x-hidden font-sans relative selection:bg-[#00A6D6]/30 selection:text-white flex flex-col justify-between">
+    <div ref={scrollContainerRef} className="bg-[#104050] min-h-screen text-white overflow-x-hidden font-sans relative selection:bg-[#00A6D6]/30 selection:text-white flex flex-col justify-between">
       {/* ------------------------------------------------------------- */}
       {/* GLOBAL BACKGROUND ELEMENTS (Matching Site Identity) */}
       {/* ------------------------------------------------------------- */}
@@ -143,7 +143,7 @@ export default function SolicitarAsesoria() {
       <div 
         className="fixed inset-0 z-0 pointer-events-none transition-opacity duration-1000"
         style={{
-          background: 'radial-gradient(circle at 50% 0%, #061A23 0%, #041014 60%, #02070A 100%)',
+          background: 'radial-gradient(circle at 50% 0%, #061A23 0%, #104050 60%, #0E3146 100%)',
           opacity: contentEntered ? 1 : 0
         }}
       />
@@ -158,7 +158,7 @@ export default function SolicitarAsesoria() {
           alt="Fondo Asesoría" 
           className="absolute inset-0 w-full h-full object-cover object-top mix-blend-screen pointer-events-none"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#041014]/60 via-[#041014]/30 to-[#041014]/80 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#104050]/60 via-[#104050]/30 to-[#104050]/80 pointer-events-none" />
       </div>
 
       {/* Caustic texture */}
@@ -218,7 +218,7 @@ export default function SolicitarAsesoria() {
                 {/* COLUMNA IZQUIERDA */}
                 <div className="flex flex-col gap-6">
                   {/* Info Contacto + Tipo Solicitante */}
-                  <div className="bg-gradient-to-br from-[#020A14]/80 to-[#041A25]/80 backdrop-blur-[16px] border border-white/5 rounded-[20px] p-5 sm:p-6 lg:p-7 shadow-[0_20px_50px_rgba(0,0,0,0.3)] relative overflow-hidden h-full flex flex-col">
+                  <div className="bg-gradient-to-br from-[#082A55]/80 to-[#0B4765]/80 backdrop-blur-[16px] border border-white/5 rounded-[20px] p-5 sm:p-6 lg:p-7 shadow-[0_20px_50px_rgba(0,0,0,0.3)] relative overflow-hidden h-full flex flex-col">
                     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,_var(--tw-gradient-stops))] from-[#00A6D6]/5 to-transparent pointer-events-none"></div>
                     
                     <h3 className="font-dm-sans text-white text-base font-medium mb-4 relative z-10 flex items-center gap-2">
@@ -251,15 +251,15 @@ export default function SolicitarAsesoria() {
                       <label className="text-[10px] uppercase tracking-[0.15em] text-white/60 ml-2 block mb-2.5">Tipo de solicitante</label>
                       <div className="relative">
                         <select name="tipoSolicitante" value={formData.tipoSolicitante} onChange={handleInputChange} required className="w-full bg-white/[0.03] border border-white/10 rounded-lg px-3.5 py-2 text-white text-[13px] font-light focus:outline-none focus:border-[#00A6D6]/50 transition-colors appearance-none cursor-pointer">
-                          <option value="" disabled className="bg-[#020A14] text-white/50">Selecciona una opción...</option>
-                          <option value="Persona natural" className="bg-[#020A14]">Persona natural</option>
-                          <option value="Agricultor" className="bg-[#020A14]">Agricultor</option>
-                          <option value="Empresa" className="bg-[#020A14]">Empresa</option>
-                          <option value="Comunidad de Aguas" className="bg-[#020A14]">Comunidad de Aguas</option>
-                          <option value="Junta de Vigilancia" className="bg-[#020A14]">Junta de Vigilancia</option>
-                          <option value="Canalistas" className="bg-[#020A14]">Canalistas</option>
-                          <option value="Organización pública" className="bg-[#020A14]">Organización pública</option>
-                          <option value="Otro" className="bg-[#020A14]">Otro</option>
+                          <option value="" disabled className="bg-[#082A55] text-white/50">Selecciona una opción...</option>
+                          <option value="Persona natural" className="bg-[#082A55]">Persona natural</option>
+                          <option value="Agricultor" className="bg-[#082A55]">Agricultor</option>
+                          <option value="Empresa" className="bg-[#082A55]">Empresa</option>
+                          <option value="Comunidad de Aguas" className="bg-[#082A55]">Comunidad de Aguas</option>
+                          <option value="Junta de Vigilancia" className="bg-[#082A55]">Junta de Vigilancia</option>
+                          <option value="Canalistas" className="bg-[#082A55]">Canalistas</option>
+                          <option value="Organización pública" className="bg-[#082A55]">Organización pública</option>
+                          <option value="Otro" className="bg-[#082A55]">Otro</option>
                         </select>
                         <div className="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none text-white/50">
                           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M6 9l6 6 6-6"/></svg>
@@ -272,7 +272,7 @@ export default function SolicitarAsesoria() {
                 {/* COLUMNA DERECHA */}
                 <div className="flex flex-col gap-6">
                   {/* Requerimiento e Interés */}
-                  <div className="bg-gradient-to-br from-[#020A14]/80 to-[#041A25]/80 backdrop-blur-[16px] border border-white/5 rounded-[20px] p-5 sm:p-6 lg:p-7 shadow-[0_20px_50px_rgba(0,0,0,0.3)] relative overflow-hidden h-full flex flex-col">
+                  <div className="bg-gradient-to-br from-[#082A55]/80 to-[#0B4765]/80 backdrop-blur-[16px] border border-white/5 rounded-[20px] p-5 sm:p-6 lg:p-7 shadow-[0_20px_50px_rgba(0,0,0,0.3)] relative overflow-hidden h-full flex flex-col">
                     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-[#00A6D6]/5 to-transparent pointer-events-none"></div>
                     
                     <h3 className="font-dm-sans text-white text-base font-medium mb-4 relative z-10 flex items-center gap-2">
@@ -339,7 +339,7 @@ export default function SolicitarAsesoria() {
 
               {/* PARTE INFERIOR */}
               <div 
-                className="bg-gradient-to-br from-[#020A14]/80 to-[#041A25]/80 backdrop-blur-[16px] border border-white/5 rounded-[20px] p-5 sm:p-6 lg:p-7 shadow-[0_20px_50px_rgba(0,0,0,0.3)] relative overflow-hidden group"
+                className="bg-gradient-to-br from-[#082A55]/80 to-[#0B4765]/80 backdrop-blur-[16px] border border-white/5 rounded-[20px] p-5 sm:p-6 lg:p-7 shadow-[0_20px_50px_rgba(0,0,0,0.3)] relative overflow-hidden group"
                 style={{
                   opacity: contentEntered ? 1 : 0,
                   transform: contentEntered ? 'translateY(0)' : 'translateY(20px)',
@@ -399,10 +399,10 @@ export default function SolicitarAsesoria() {
                       <label className="text-[10px] uppercase tracking-[0.15em] text-white/60 ml-2">Preferencia de contacto</label>
                       <div className="relative">
                         <select name="preferenciaContacto" value={formData.preferenciaContacto} onChange={handleInputChange} required className="w-full bg-white/[0.03] border border-white/10 rounded-lg px-3.5 py-2 text-white text-[13px] font-light focus:outline-none focus:border-[#00A6D6]/50 transition-colors appearance-none cursor-pointer">
-                          <option value="" disabled className="bg-[#020A14] text-white/50">Selecciona...</option>
-                          <option value="WhatsApp" className="bg-[#020A14]">WhatsApp</option>
-                          <option value="Teléfono" className="bg-[#020A14]">Teléfono</option>
-                          <option value="Correo electrónico" className="bg-[#020A14]">Correo</option>
+                          <option value="" disabled className="bg-[#082A55] text-white/50">Selecciona...</option>
+                          <option value="WhatsApp" className="bg-[#082A55]">WhatsApp</option>
+                          <option value="Teléfono" className="bg-[#082A55]">Teléfono</option>
+                          <option value="Correo electrónico" className="bg-[#082A55]">Correo</option>
                         </select>
                         <div className="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none text-white/50">
                           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M6 9l6 6 6-6"/></svg>
@@ -414,10 +414,10 @@ export default function SolicitarAsesoria() {
                       <label className="text-[10px] uppercase tracking-[0.15em] text-white/60 ml-2">Nivel de urgencia</label>
                       <div className="relative">
                         <select name="urgencia" value={formData.urgencia} onChange={handleInputChange} required className="w-full bg-white/[0.03] border border-white/10 rounded-lg px-3.5 py-2 text-white text-[13px] font-light focus:outline-none focus:border-[#00A6D6]/50 transition-colors appearance-none cursor-pointer">
-                          <option value="" disabled className="bg-[#020A14] text-white/50">Selecciona...</option>
-                          <option value="Baja" className="bg-[#020A14]">Baja</option>
-                          <option value="Media" className="bg-[#020A14]">Media</option>
-                          <option value="Alta" className="bg-[#020A14]">Alta</option>
+                          <option value="" disabled className="bg-[#082A55] text-white/50">Selecciona...</option>
+                          <option value="Baja" className="bg-[#082A55]">Baja</option>
+                          <option value="Media" className="bg-[#082A55]">Media</option>
+                          <option value="Alta" className="bg-[#082A55]">Alta</option>
 
                         </select>
                         <div className="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none text-white/50">
@@ -453,7 +453,7 @@ export default function SolicitarAsesoria() {
                   <button 
                     type="submit" 
                     disabled={!formData.confirmacion}
-                    className={`inline-flex items-center justify-center whitespace-nowrap gap-2 px-7 py-2.5 rounded-full text-[11px] font-medium tracking-[0.15em] uppercase transition-all duration-300 transform ${formData.confirmacion ? 'bg-[#00A6D6] hover:bg-[#00B8ED] text-[#020A14] shadow-[0_4px_15px_rgba(0,166,214,0.4)] hover:-translate-y-0.5 cursor-pointer font-semibold' : 'bg-white/5 border border-white/10 text-white/30 cursor-not-allowed'}`}
+                    className={`inline-flex items-center justify-center whitespace-nowrap gap-2 px-7 py-2.5 rounded-full text-[11px] font-medium tracking-[0.15em] uppercase transition-all duration-300 transform ${formData.confirmacion ? 'bg-[#00A6D6] hover:bg-[#00B8ED] text-[#082A55] shadow-[0_4px_15px_rgba(0,166,214,0.4)] hover:-translate-y-0.5 cursor-pointer font-semibold' : 'bg-white/5 border border-white/10 text-white/30 cursor-not-allowed'}`}
                   >
                     Enviar solicitud
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
@@ -465,7 +465,7 @@ export default function SolicitarAsesoria() {
           ) : (
             /* SUCCESS VIEW (Recuadro 25% más compacto, centrado vertical y horizontalmente) */
             <div 
-              className="w-full bg-gradient-to-b from-[#020D1A]/95 via-[#031627]/90 to-[#020A14]/95 backdrop-blur-[24px] border border-[#00A6D6]/40 rounded-[28px] p-6 sm:p-8 lg:p-9 shadow-[0_20px_60px_rgba(0,166,214,0.18)] relative overflow-hidden flex flex-col items-center text-center animate-fade-in my-auto"
+              className="w-full bg-gradient-to-b from-[#072E5C]/95 via-[#083B69]/90 to-[#082A55]/95 backdrop-blur-[24px] border border-[#00A6D6]/40 rounded-[28px] p-6 sm:p-8 lg:p-9 shadow-[0_20px_60px_rgba(0,166,214,0.18)] relative overflow-hidden flex flex-col items-center text-center animate-fade-in my-auto"
             >
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#00A6D6]/15 via-transparent to-transparent pointer-events-none"></div>
               
@@ -514,7 +514,7 @@ export default function SolicitarAsesoria() {
               {/* Botón: Bordes redondeados, degradado azul, brillo, hover suave y flecha derecha */}
               <button 
                 onClick={() => window.location.hash = '#inicio'}
-                className="relative z-10 inline-flex items-center gap-3 bg-gradient-to-r from-[#00A6D6] to-[#008BB4] text-[#020A14] px-8 py-3 rounded-full text-[11px] font-semibold tracking-[0.18em] uppercase shadow-[0_0_20px_rgba(0,166,214,0.35)] hover:shadow-[0_0_30px_rgba(0,166,214,0.6)] hover:scale-[1.03] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
+                className="relative z-10 inline-flex items-center gap-3 bg-gradient-to-r from-[#00A6D6] to-[#008BB4] text-[#082A55] px-8 py-3 rounded-full text-[11px] font-semibold tracking-[0.18em] uppercase shadow-[0_0_20px_rgba(0,166,214,0.35)] hover:shadow-[0_0_30px_rgba(0,166,214,0.6)] hover:scale-[1.03] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
               >
                 VOLVER AL INICIO
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

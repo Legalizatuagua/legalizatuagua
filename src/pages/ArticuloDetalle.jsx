@@ -57,10 +57,10 @@ export default function ArticuloDetalle({ slug }) {
 
   if (!article) {
     return (
-      <div className="w-full min-h-screen bg-[#041014] text-white flex flex-col items-center justify-center p-6 relative overflow-hidden font-sans">
-        <div className="fixed inset-0 bg-[#020810] z-0"></div>
+      <div className="w-full min-h-screen bg-[#104050] text-white flex flex-col items-center justify-center p-6 relative overflow-hidden font-sans">
+        <div className="fixed inset-0 bg-[#0A284F] z-0"></div>
         <AnimatedBorders />
-        <div className="relative z-10 text-center max-w-lg bg-[#020A14]/80 backdrop-blur-[20px] border border-white/10 p-8 sm:p-10 rounded-[28px] shadow-2xl">
+        <div className="relative z-10 text-center max-w-lg bg-[#082A55]/80 backdrop-blur-[20px] border border-white/10 p-8 sm:p-10 rounded-[28px] shadow-2xl">
           <div className="w-16 h-16 rounded-full bg-[#00A6D6]/10 border border-[#00A6D6]/30 flex items-center justify-center mx-auto mb-6 text-[#00A6D6]">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
           </div>
@@ -72,7 +72,7 @@ export default function ArticuloDetalle({ slug }) {
           </p>
           <a 
             href="#/biblioteca"
-            className="inline-flex items-center gap-2 bg-[#00A6D6] hover:bg-[#00B8ED] text-[#020A14] px-6 py-3 rounded-full text-xs font-semibold tracking-[0.15em] uppercase transition-all shadow-[0_0_20px_rgba(0,166,214,0.35)]"
+            className="inline-flex items-center gap-2 bg-[#00A6D6] hover:bg-[#00B8ED] text-[#082A55] px-6 py-3 rounded-full text-xs font-semibold tracking-[0.15em] uppercase transition-all shadow-[0_0_20px_rgba(0,166,214,0.35)]"
           >
             ← Volver a la Biblioteca Jurídica
           </a>
@@ -82,16 +82,16 @@ export default function ArticuloDetalle({ slug }) {
   }
 
   return (
-    <div className="w-full min-h-screen bg-[#041014] relative overflow-hidden font-sans text-white selection:bg-[#00A6D6] selection:text-white flex flex-col justify-between">
+    <div className="w-full min-h-screen bg-[#104050] relative overflow-hidden font-sans text-white selection:bg-[#00A6D6] selection:text-white flex flex-col justify-between">
       
       {/* GLOBAL BACKGROUND SYSTEM */}
       <div className="fixed inset-0 w-full h-full z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[#020810]"></div>
+        <div className="absolute inset-0 bg-[#0A284F]"></div>
         <div className="absolute inset-0 w-[200%] h-full animate-super-slow-pan opacity-20 mix-blend-screen">
           <img src={waterDark} alt="Water texture" className="w-full h-full object-cover" />
         </div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_transparent_0%,_#020810_100%)] opacity-85"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#020810] via-transparent to-[#020810] opacity-90"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_transparent_0%,_#0A284F_100%)] opacity-85"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0A284F] via-transparent to-[#0A284F] opacity-90"></div>
       </div>
 
       <AnimatedBorders />
@@ -134,7 +134,7 @@ export default function ArticuloDetalle({ slug }) {
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
               {copied && (
-                <span className="absolute -bottom-8 right-0 bg-[#00A6D6] text-[#020A14] font-semibold text-[10px] px-2 py-0.5 rounded shadow whitespace-nowrap animate-fade-in">
+                <span className="absolute -bottom-8 right-0 bg-[#00A6D6] text-[#082A55] font-semibold text-[10px] px-2 py-0.5 rounded shadow whitespace-nowrap animate-fade-in">
                   ¡Enlace copiado!
                 </span>
               )}
@@ -144,7 +144,7 @@ export default function ArticuloDetalle({ slug }) {
 
         {/* ARTICLE HEADER CARD */}
         <header 
-          className="bg-gradient-to-br from-[#020A14]/90 to-[#041A25]/90 backdrop-blur-[20px] border border-white/10 rounded-[24px] lg:rounded-[32px] p-6 sm:p-8 lg:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] mb-8 sm:mb-12 relative overflow-hidden"
+          className="bg-gradient-to-br from-[#082A55]/90 to-[#0B4765]/90 backdrop-blur-[20px] border border-white/10 rounded-[24px] lg:rounded-[32px] p-6 sm:p-8 lg:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] mb-8 sm:mb-12 relative overflow-hidden"
           style={{
             opacity: contentEntered ? 1 : 0,
             transform: contentEntered ? 'translateY(0)' : 'translateY(20px)',
@@ -196,7 +196,7 @@ export default function ArticuloDetalle({ slug }) {
           }}
         >
           <div className="absolute inset-0 bg-[#00A6D6]/10 mix-blend-overlay z-10 pointer-events-none"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-[#020810]/80 via-transparent to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A284F]/80 via-transparent to-transparent z-10 pointer-events-none"></div>
           <img 
             src={article.image} 
             alt={article.title} 
@@ -207,7 +207,7 @@ export default function ArticuloDetalle({ slug }) {
         {/* LEAD / EXCERPT BLOCK */}
         {article.excerpt && (
           <div 
-            className="bg-[#020A14]/70 backdrop-blur-[16px] border-l-4 border-[#00A6D6] border-y border-r border-white/10 rounded-r-[18px] p-5 sm:p-7 mb-8 sm:mb-10 text-white/90 font-sans text-base sm:text-lg leading-[1.6] font-light shadow-lg text-justify hyphens-auto"
+            className="bg-[#082A55]/70 backdrop-blur-[16px] border-l-4 border-[#00A6D6] border-y border-r border-white/10 rounded-r-[18px] p-5 sm:p-7 mb-8 sm:mb-10 text-white/90 font-sans text-base sm:text-lg leading-[1.6] font-light shadow-lg text-justify hyphens-auto"
             style={{
               opacity: contentEntered ? 1 : 0,
               transform: contentEntered ? 'translateY(0)' : 'translateY(20px)',
@@ -220,7 +220,7 @@ export default function ArticuloDetalle({ slug }) {
 
         {/* MAIN ARTICLE BODY (Formatted HTML with custom styling) */}
         <article 
-          className="bg-[#020A14]/80 backdrop-blur-[20px] border border-white/5 rounded-[24px] lg:rounded-[32px] p-6 sm:p-10 lg:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.4)] mb-12 sm:mb-16 relative"
+          className="bg-[#082A55]/80 backdrop-blur-[20px] border border-white/5 rounded-[24px] lg:rounded-[32px] p-6 sm:p-10 lg:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.4)] mb-12 sm:mb-16 relative"
           style={{
             opacity: contentEntered ? 1 : 0,
             transform: contentEntered ? 'translateY(0)' : 'translateY(20px)',
@@ -323,7 +323,7 @@ export default function ArticuloDetalle({ slug }) {
 
           <a 
             href="#/asesoria"
-            className="inline-flex items-center whitespace-nowrap gap-2.5 bg-[#00A6D6] hover:bg-[#00B8ED] text-[#020A14] px-7 py-3.5 rounded-full text-xs font-semibold tracking-[0.15em] uppercase transition-all duration-300 shadow-[0_0_20px_rgba(0,166,214,0.4)] hover:shadow-[0_0_30px_rgba(0,166,214,0.6)] transform hover:-translate-y-0.5 cursor-pointer shrink-0"
+            className="inline-flex items-center whitespace-nowrap gap-2.5 bg-[#00A6D6] hover:bg-[#00B8ED] text-[#082A55] px-7 py-3.5 rounded-full text-xs font-semibold tracking-[0.15em] uppercase transition-all duration-300 shadow-[0_0_20px_rgba(0,166,214,0.4)] hover:shadow-[0_0_30px_rgba(0,166,214,0.6)] transform hover:-translate-y-0.5 cursor-pointer shrink-0"
           >
             SOLICITAR ASESORÍA
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -347,7 +347,7 @@ export default function ArticuloDetalle({ slug }) {
               {relatedArticles.map((rel) => (
                 <div 
                   key={rel.slug}
-                  className="bg-[#020A14]/70 backdrop-blur-[16px] border border-white/5 rounded-[18px] flex flex-col shadow-lg overflow-hidden group hover:border-[#00A6D6]/30 transition-all duration-300"
+                  className="bg-[#082A55]/70 backdrop-blur-[16px] border border-white/5 rounded-[18px] flex flex-col shadow-lg overflow-hidden group hover:border-[#00A6D6]/30 transition-all duration-300"
                 >
                   <div className="h-[130px] sm:h-[150px] w-full overflow-hidden relative">
                     <img 

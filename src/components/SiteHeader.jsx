@@ -8,7 +8,7 @@ export default function SiteHeader({ currentRoute = '' }) {
   return (
     <>
       <header 
-        className="fixed top-0 left-0 w-full z-50 px-6 lg:px-24 py-4 lg:py-6 flex justify-between items-center bg-[#020A14] border-b border-white/10 shadow-lg"
+        className="fixed top-0 left-0 w-full z-50 px-6 lg:px-24 py-4 lg:py-6 flex justify-between items-center bg-[#082A55] border-b border-white/10 shadow-lg"
       >
         <a href="#portada" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
           <img src={logoOficial} alt="Legaliza Tu Agua" className="h-8 lg:h-10 w-auto object-contain" />
@@ -82,7 +82,7 @@ export default function SiteHeader({ currentRoute = '' }) {
           className="fixed inset-x-4 top-20 z-50 lg:hidden transition-all duration-300 animate-fade-in pointer-events-auto"
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="w-full bg-[#020A14] border border-white/15 rounded-2xl p-5 sm:p-6 shadow-[0_20px_50px_rgba(0,0,0,0.85)] flex flex-col">
+          <div className="w-full bg-[#082A55] border border-white/15 rounded-2xl p-5 sm:p-6 shadow-[0_20px_50px_rgba(0,0,0,0.85)] flex flex-col">
             <a 
               href="#inicio" 
               onClick={() => setMobileMenuOpen(false)} 

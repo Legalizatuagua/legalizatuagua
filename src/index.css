@@ -6,13 +6,13 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px; /* Offset para el header fijo */
-  background-color: #061A33;
+  background-color: #0E3B73;
 }
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
-  background-color: #061A33;
+  background-color: #0E3B73;
   color: #FFFFFF;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -52,13 +52,13 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #061A33;
+  background: #0E3B73;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #00A6D6;
   border-radius: 4px;
-  border: 2px solid #061A33;
+  border: 2px solid #0E3B73;
 }
 
 ::-webkit-scrollbar-thumb:hover {

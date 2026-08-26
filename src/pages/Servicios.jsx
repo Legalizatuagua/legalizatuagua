@@ -47,12 +47,12 @@ export default function Servicios() {
   const cleanPhone = (siteConfig.whatsapp || '56994112293').replace(/[^0-9]/g, '');
 
   return (
-    <div className="bg-[#041014] min-h-screen text-white font-sans overflow-x-hidden relative selection:bg-[#00A6D6]/30 selection:text-white pt-[110px] lg:pt-[120px] pb-24">
+    <div className="bg-[#104050] min-h-screen text-white font-sans overflow-x-hidden relative selection:bg-[#00A6D6]/30 selection:text-white pt-[110px] lg:pt-[120px] pb-24">
       {/* Background Elements */}
       <div 
         className="fixed inset-0 z-0 pointer-events-none transition-opacity duration-1000"
         style={{
-          background: 'radial-gradient(circle at 50% 0%, #061A23 0%, #041014 60%, #02070A 100%)',
+          background: 'radial-gradient(circle at 50% 0%, #061A23 0%, #104050 60%, #0E3146 100%)',
           opacity: contentEntered ? 1 : 0
         }}
       />
@@ -75,7 +75,7 @@ export default function Servicios() {
           alt="" 
           className="w-full h-full object-cover opacity-60 animate-slow-pan mix-blend-luminosity" 
         />
-        <div className="absolute inset-0 bg-[#041014]/60 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-[#104050]/60 mix-blend-multiply"></div>
       </div>
 
       {/* Main Content Container */}
@@ -112,7 +112,7 @@ export default function Servicios() {
                 const numberDisplay = srv.order || (i + 1);
 
                 return (
-                  <div key={srv.slug || srv.id || i} className="bg-[#020A14]/60 backdrop-blur-[16px] border border-[#00A6D6]/20 rounded-[12px] lg:rounded-[16px] p-5 lg:p-6 flex flex-col items-center text-center shadow-[0_4px_24px_0_rgba(0,166,214,0.05)] relative overflow-hidden group hover:border-[#00A6D6]/40 hover:bg-[#020A14]/80 transition-colors duration-500">
+                  <div key={srv.slug || srv.id || i} className="bg-[#082A55]/60 backdrop-blur-[16px] border border-[#00A6D6]/20 rounded-[12px] lg:rounded-[16px] p-5 lg:p-6 flex flex-col items-center text-center shadow-[0_4px_24px_0_rgba(0,166,214,0.05)] relative overflow-hidden group hover:border-[#00A6D6]/40 hover:bg-[#082A55]/80 transition-colors duration-500">
                     <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent pointer-events-none"></div>
                     <div className="text-[#00A6D6] mb-3 transform group-hover:scale-110 transition-transform duration-500 w-[24px] h-[24px] lg:w-[28px] lg:h-[28px]">
                       {SERVICE_ICONS[iconIndex]}
@@ -138,7 +138,7 @@ export default function Servicios() {
               })}
 
               {/* CALL TO ACTION CARD */}
-              <div className="bg-gradient-to-br from-[#020A14]/70 to-[#041A25]/70 backdrop-blur-[16px] border border-[#00A6D6]/40 rounded-[12px] lg:rounded-[16px] p-5 lg:p-6 flex flex-col items-center text-center shadow-[0_4px_24px_0_rgba(0,166,214,0.15)] relative overflow-hidden group col-span-1 hover:from-[#020A14]/80 hover:to-[#041A25]/80 transition-colors duration-500">
+              <div className="bg-gradient-to-br from-[#082A55]/70 to-[#0B4765]/70 backdrop-blur-[16px] border border-[#00A6D6]/40 rounded-[12px] lg:rounded-[16px] p-5 lg:p-6 flex flex-col items-center text-center shadow-[0_4px_24px_0_rgba(0,166,214,0.15)] relative overflow-hidden group col-span-1 hover:from-[#082A55]/80 hover:to-[#0B4765]/80 transition-colors duration-500">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#00A6D6]/10 to-transparent pointer-events-none"></div>
                 <div className="text-[#00A6D6] mb-3 opacity-80 transform group-hover:scale-110 transition-transform duration-500 w-[24px] h-[24px] lg:w-[28px] lg:h-[28px]">
                   <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01"/><path d="M12 10h.01"/><path d="M16 10h.01"/></svg>

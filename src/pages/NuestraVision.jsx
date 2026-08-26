@@ -122,11 +122,11 @@ export default function NuestraVision() {
   };
 
   return (
-    <div className="w-full min-h-screen bg-[#041014] relative overflow-x-hidden font-sans text-white selection:bg-[#00A6D6] selection:text-white">
+    <div className="w-full min-h-screen bg-[#104050] relative overflow-x-hidden font-sans text-white selection:bg-[#00A6D6] selection:text-white">
       
       {/* GLOBAL BACKGROUND ELEMENTS */}
       <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden select-none">
-        <div className="absolute inset-0 w-full h-full bg-[#020810]">
+        <div className="absolute inset-0 w-full h-full bg-[#0A284F]">
           <img
             src={landscapeClean}
             alt="Fondo de agua"
@@ -242,7 +242,7 @@ export default function NuestraVision() {
             {essenceCards.map((card, index) => (
               <div 
                 key={index}
-                className="absolute w-full max-w-[320px] lg:max-w-[400px] bg-gradient-to-br from-[#020A14]/90 to-[#041A25]/90 backdrop-blur-[24px] border border-[#00A6D6]/30 rounded-[32px] p-8 lg:p-12 flex flex-col items-center text-center shadow-[0_20px_50px_rgba(0,166,214,0.15)] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
+                className="absolute w-full max-w-[320px] lg:max-w-[400px] bg-gradient-to-br from-[#082A55]/90 to-[#0B4765]/90 backdrop-blur-[24px] border border-[#00A6D6]/30 rounded-[32px] p-8 lg:p-12 flex flex-col items-center text-center shadow-[0_20px_50px_rgba(0,166,214,0.15)] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
                 style={getCardStyle(index)}
                 onClick={() => {
                   const diff = (index - carouselIndex + 3) % 3;
@@ -306,7 +306,7 @@ export default function NuestraVision() {
                 { step: '4', title: 'Protección y Seguimiento', desc: 'Acompañamos cada proceso hasta asegurar la protección jurídica de los derechos de agua.' }
               ].map((item, i) => (
                 <div key={i} className="timeline-step flex flex-col items-center text-center" data-index={i}>
-                  <div className={`w-14 h-14 rounded-full flex items-center justify-center font-editorial text-xl italic transition-all duration-[2000ms] ease-out mb-8 border ${activeStep >= i ? 'bg-[#00A6D6] text-white border-[#00A6D6] shadow-[0_0_20px_rgba(0,166,214,0.6)] scale-110' : 'bg-[#020A14] text-white/40 border-white/10 scale-100'}`}>
+                  <div className={`w-14 h-14 rounded-full flex items-center justify-center font-editorial text-xl italic transition-all duration-[2000ms] ease-out mb-8 border ${activeStep >= i ? 'bg-[#00A6D6] text-white border-[#00A6D6] shadow-[0_0_20px_rgba(0,166,214,0.6)] scale-110' : 'bg-[#082A55] text-white/40 border-white/10 scale-100'}`}>
                     {item.step}
                   </div>
                   <h4 className={`font-dm-sans text-[18px] font-medium mb-3 transition-colors duration-[2000ms] ${activeStep >= i ? 'text-[#00A6D6]' : 'text-[#FFFAF0]'}`}>{item.title}</h4>
@@ -334,7 +334,7 @@ export default function NuestraVision() {
                 { step: '4', title: 'Protección y Seguimiento', desc: 'Acompañamos cada proceso hasta asegurar la protección jurídica de los derechos de agua.' }
               ].map((item, i) => (
                 <div key={i} className="timeline-step flex gap-6" data-index={i}>
-                  <div className={`w-12 h-12 shrink-0 rounded-full flex items-center justify-center font-editorial text-xl italic transition-all duration-[2000ms] ease-out border mt-1 ${activeStep >= i ? 'bg-[#00A6D6] text-white border-[#00A6D6] shadow-[0_0_20px_rgba(0,166,214,0.6)] scale-110' : 'bg-[#020A14] text-white/40 border-white/10 scale-100'}`}>
+                  <div className={`w-12 h-12 shrink-0 rounded-full flex items-center justify-center font-editorial text-xl italic transition-all duration-[2000ms] ease-out border mt-1 ${activeStep >= i ? 'bg-[#00A6D6] text-white border-[#00A6D6] shadow-[0_0_20px_rgba(0,166,214,0.6)] scale-110' : 'bg-[#082A55] text-white/40 border-white/10 scale-100'}`}>
                     {item.step}
                   </div>
                   <div className="flex flex-col">

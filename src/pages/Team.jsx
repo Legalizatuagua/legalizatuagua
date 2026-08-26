@@ -21,12 +21,12 @@ export default function Team() {
   const defaultAvatar = "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&q=80&w=600";
 
   return (
-    <div className="bg-[#041014] min-h-screen text-white font-sans overflow-x-hidden relative selection:bg-[#00A6D6]/30 selection:text-white pt-[110px] lg:pt-[120px] pb-24">
+    <div className="bg-[#104050] min-h-screen text-white font-sans overflow-x-hidden relative selection:bg-[#00A6D6]/30 selection:text-white pt-[110px] lg:pt-[120px] pb-24">
       {/* Background Elements */}
       <div 
         className="fixed inset-0 z-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(circle at 50% 0%, #061A23 0%, #041014 60%, #02070A 100%)'
+          background: 'radial-gradient(circle at 50% 0%, #061A23 0%, #104050 60%, #0E3146 100%)'
         }}
       />
       <AnimatedBorders />
@@ -52,7 +52,7 @@ export default function Team() {
           {members.map((member, i) => (
             <article 
               key={member.slug || member.id || i} 
-              className="bg-[#020A14]/80 backdrop-blur-[16px] border border-white/10 rounded-[24px] overflow-hidden shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:border-[#00A6D6]/40 hover:bg-white/[0.04] transition-all duration-300 flex flex-col md:flex-row group"
+              className="bg-[#082A55]/80 backdrop-blur-[16px] border border-white/10 rounded-[24px] overflow-hidden shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:border-[#00A6D6]/40 hover:bg-white/[0.04] transition-all duration-300 flex flex-col md:flex-row group"
             >
               <div className="md:w-2/5 h-64 md:h-auto bg-[#061A23] relative overflow-hidden shrink-0">
                 <img
@@ -60,7 +60,7 @@ export default function Team() {
                   alt={member.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-transparent to-[#020A14] pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-transparent to-[#082A55] pointer-events-none"></div>
               </div>
               <div className="p-6 sm:p-8 md:w-3/5 flex flex-col justify-between text-left">
                 <div>

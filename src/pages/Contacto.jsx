@@ -49,13 +49,13 @@ export default function Contacto() {
   };
 
   return (
-    <div className="bg-[#041014] min-h-screen text-white overflow-x-hidden font-sans relative selection:bg-[#00A6D6]/30 selection:text-white">
+    <div className="bg-[#104050] min-h-screen text-white overflow-x-hidden font-sans relative selection:bg-[#00A6D6]/30 selection:text-white">
       
       {/* Backgrounds */}
       <div 
         className="fixed inset-0 z-0 pointer-events-none transition-opacity duration-1000"
         style={{
-          background: 'radial-gradient(circle at 50% 0%, #061A23 0%, #041014 60%, #02070A 100%)',
+          background: 'radial-gradient(circle at 50% 0%, #061A23 0%, #104050 60%, #0E3146 100%)',
           opacity: contentEntered ? 1 : 0
         }}
       />
@@ -77,7 +77,7 @@ export default function Contacto() {
           alt="" 
           className="w-full h-full object-cover opacity-60 animate-slow-pan mix-blend-luminosity" 
         />
-        <div className="absolute inset-0 bg-[#041014]/60 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-[#104050]/60 mix-blend-multiply"></div>
       </div>
       
       <AnimatedBorders />
@@ -117,7 +117,7 @@ export default function Contacto() {
             >
               {/* LEFT COLUMN: CONTACT INFO */}
               <div className="lg:col-span-2 flex flex-col gap-10">
-                <div className="bg-gradient-to-br from-[#020A14]/80 to-[#041A25]/80 backdrop-blur-[16px] border border-white/5 rounded-[24px] p-8 lg:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] relative overflow-hidden flex flex-col gap-8 h-full">
+                <div className="bg-gradient-to-br from-[#082A55]/80 to-[#0B4765]/80 backdrop-blur-[16px] border border-white/5 rounded-[24px] p-8 lg:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] relative overflow-hidden flex flex-col gap-8 h-full">
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,_var(--tw-gradient-stops))] from-[#00A6D6]/5 to-transparent pointer-events-none"></div>
                   
                   <div className="relative z-10 flex flex-col gap-2">
@@ -173,7 +173,7 @@ export default function Contacto() {
 
               {/* RIGHT COLUMN: FORM */}
               <div className="lg:col-span-3">
-                <form onSubmit={handleSubmit} className="bg-gradient-to-br from-[#020A14]/80 to-[#041A25]/80 backdrop-blur-[16px] border border-white/5 rounded-[24px] p-8 lg:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] relative overflow-hidden flex flex-col gap-6 h-full">
+                <form onSubmit={handleSubmit} className="bg-gradient-to-br from-[#082A55]/80 to-[#0B4765]/80 backdrop-blur-[16px] border border-white/5 rounded-[24px] p-8 lg:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] relative overflow-hidden flex flex-col gap-6 h-full">
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-[#00A6D6]/5 to-transparent pointer-events-none"></div>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-10">
@@ -203,7 +203,7 @@ export default function Contacto() {
                   </div>
 
                   <div className="pt-2 relative z-10">
-                    <button type="submit" className="w-full inline-flex items-center justify-center gap-2 bg-[#00A6D6] text-[#020A14] px-8 py-3.5 rounded-full text-[11px] lg:text-[12px] tracking-[0.15em] uppercase font-medium hover:bg-[#00B8ED] transition-all duration-300 shadow-[0_4px_15px_rgba(0,166,214,0.4)] hover:shadow-[0_8px_25px_rgba(0,166,214,0.5)]">
+                    <button type="submit" className="w-full inline-flex items-center justify-center gap-2 bg-[#00A6D6] text-[#082A55] px-8 py-3.5 rounded-full text-[11px] lg:text-[12px] tracking-[0.15em] uppercase font-medium hover:bg-[#00B8ED] transition-all duration-300 shadow-[0_4px_15px_rgba(0,166,214,0.4)] hover:shadow-[0_8px_25px_rgba(0,166,214,0.5)]">
                       Enviar consulta
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
                     </button>
@@ -212,7 +212,7 @@ export default function Contacto() {
               </div>
             </div>
           ) : (
-            <div className="max-w-2xl mx-auto bg-gradient-to-br from-[#020A14]/90 to-[#041A25]/90 backdrop-blur-[24px] border border-[#00A6D6]/30 rounded-[32px] p-12 text-center shadow-[0_20px_50px_rgba(0,166,214,0.15)] flex flex-col items-center">
+            <div className="max-w-2xl mx-auto bg-gradient-to-br from-[#082A55]/90 to-[#0B4765]/90 backdrop-blur-[24px] border border-[#00A6D6]/30 rounded-[32px] p-12 text-center shadow-[0_20px_50px_rgba(0,166,214,0.15)] flex flex-col items-center">
               <div className="w-20 h-20 rounded-full bg-[#00A6D6]/10 flex items-center justify-center mb-6 border border-[#00A6D6]/30 shadow-[0_0_20px_rgba(0,166,214,0.3)]">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00A6D6" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
               </div>

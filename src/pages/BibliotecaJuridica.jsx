@@ -58,12 +58,12 @@ export default function BibliotecaJuridica() {
     : articles.filter(art => normalizeCategorySlug(art.category) === normalizeCategorySlug(displayedCategory));
 
   return (
-    <div className="w-full min-h-screen bg-[#041014] relative overflow-hidden font-sans text-white selection:bg-[#00A6D6] selection:text-white">
+    <div className="w-full min-h-screen bg-[#104050] relative overflow-hidden font-sans text-white selection:bg-[#00A6D6] selection:text-white">
       
       {/* GLOBAL BACKGROUND SYSTEM */}
       <div className="fixed inset-0 w-full h-full z-0 pointer-events-none">
         {/* Deep blue base layer */}
-        <div className="absolute inset-0 bg-[#020810]"></div>
+        <div className="absolute inset-0 bg-[#0A284F]"></div>
         
         {/* Subtle Water Texture with Slow Pan */}
         <div className="absolute inset-0 w-[200%] h-full animate-super-slow-pan opacity-20 mix-blend-screen">
@@ -71,9 +71,9 @@ export default function BibliotecaJuridica() {
         </div>
         
         {/* Dramatic Vignette / Shadows */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_#020810_100%)] opacity-80"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#020810] via-transparent to-[#020810] opacity-90"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#020810] via-transparent to-[#020810] opacity-80"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_#0A284F_100%)] opacity-80"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0A284F] via-transparent to-[#0A284F] opacity-90"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0A284F] via-transparent to-[#0A284F] opacity-80"></div>
       </div>
 
       <AnimatedBorders />
@@ -141,7 +141,7 @@ export default function BibliotecaJuridica() {
           {/* FEATURED ARTICLE (Horizontal Big Card - ONLY IN 'TODOS') */}
           {isTodos && featuredArticle && (
             <div 
-              className="bg-[#020A14]/80 backdrop-blur-[16px] border border-white/5 rounded-[20px] lg:rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative overflow-hidden group mb-10 lg:mb-14 flex flex-col-reverse lg:flex-row hover:border-[#00A6D6]/30 transition-colors duration-500"
+              className="bg-[#082A55]/80 backdrop-blur-[16px] border border-white/5 rounded-[20px] lg:rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative overflow-hidden group mb-10 lg:mb-14 flex flex-col-reverse lg:flex-row hover:border-[#00A6D6]/30 transition-colors duration-500"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] to-transparent pointer-events-none"></div>
               
@@ -178,7 +178,7 @@ export default function BibliotecaJuridica() {
 
               <div className="w-full lg:w-[45%] h-[180px] lg:h-auto shrink-0 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[#00A6D6]/10 mix-blend-overlay z-10 transition-opacity duration-500 group-hover:opacity-0 pointer-events-none"></div>
-                <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-l from-transparent to-[#020A14] z-10 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-l from-transparent to-[#082A55] z-10 pointer-events-none"></div>
                 <img src={featuredArticle.image} alt={featuredArticle.title} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" />
               </div>
             </div>
@@ -186,7 +186,7 @@ export default function BibliotecaJuridica() {
 
           {/* EMPTY STATE */}
           {gridArticles.length === 0 && !isTodos ? (
-            <div className="w-full py-16 lg:py-24 px-6 flex flex-col items-center justify-center text-center bg-[#020A14]/60 backdrop-blur-[16px] border border-white/5 rounded-[20px] lg:rounded-[32px] my-6 shadow-[0_8px_32px_0_rgba(0,0,0,0.25)]">
+            <div className="w-full py-16 lg:py-24 px-6 flex flex-col items-center justify-center text-center bg-[#082A55]/60 backdrop-blur-[16px] border border-white/5 rounded-[20px] lg:rounded-[32px] my-6 shadow-[0_8px_32px_0_rgba(0,0,0,0.25)]">
               <div className="w-14 h-14 rounded-full bg-[#00A6D6]/10 border border-[#00A6D6]/30 flex items-center justify-center mb-5 text-[#00A6D6] shadow-[0_0_20px_rgba(0,166,214,0.25)]">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/>
@@ -205,7 +205,7 @@ export default function BibliotecaJuridica() {
               {gridArticles.map((article, i) => (
                 <div 
                   key={article.slug || i} 
-                  className="bg-[#020A14]/70 backdrop-blur-[16px] border border-white/5 rounded-[14px] sm:rounded-[16px] lg:rounded-[24px] flex flex-col shadow-[0_8px_32px_0_rgba(0,0,0,0.25)] relative overflow-hidden group hover:bg-white/[0.04] hover:border-white/15 transition-all duration-500"
+                  className="bg-[#082A55]/70 backdrop-blur-[16px] border border-white/5 rounded-[14px] sm:rounded-[16px] lg:rounded-[24px] flex flex-col shadow-[0_8px_32px_0_rgba(0,0,0,0.25)] relative overflow-hidden group hover:bg-white/[0.04] hover:border-white/15 transition-all duration-500"
                   style={{
                     animationDelay: `${i * 60}ms`
                   }}
@@ -267,7 +267,7 @@ export default function BibliotecaJuridica() {
               {recursos.map((rec) => (
                 <div 
                   key={rec.id}
-                  className="bg-[#020A14]/80 backdrop-blur-[16px] border border-white/10 rounded-[18px] lg:rounded-[22px] p-5 lg:p-6 flex flex-col justify-between hover:border-[#00A6D6]/40 hover:bg-white/[0.04] transition-all duration-300 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] group"
+                  className="bg-[#082A55]/80 backdrop-blur-[16px] border border-white/10 rounded-[18px] lg:rounded-[22px] p-5 lg:p-6 flex flex-col justify-between hover:border-[#00A6D6]/40 hover:bg-white/[0.04] transition-all duration-300 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] group"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-3">
@@ -324,7 +324,7 @@ export default function BibliotecaJuridica() {
           }}
         >
           {/* COMPACT SUBSCRIPTION BLOCK */}
-          <div className="w-full max-w-[350px] bg-gradient-to-br from-[#020A14] to-[#041A25] backdrop-blur-[16px] border border-[#00A6D6]/20 rounded-[24px] px-6 py-6 flex flex-col shadow-[0_8px_32px_0_rgba(0,166,214,0.1)] relative overflow-hidden group">
+          <div className="w-full max-w-[350px] bg-gradient-to-br from-[#082A55] to-[#0B4765] backdrop-blur-[16px] border border-[#00A6D6]/20 rounded-[24px] px-6 py-6 flex flex-col shadow-[0_8px_32px_0_rgba(0,166,214,0.1)] relative overflow-hidden group">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,_var(--tw-gradient-stops))] from-[#00A6D6]/10 to-transparent pointer-events-none"></div>
             
             <div className="relative z-10 mb-4 text-left">

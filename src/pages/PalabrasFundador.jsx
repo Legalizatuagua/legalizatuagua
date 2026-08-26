@@ -17,7 +17,7 @@ export default function PalabrasFundador() {
   }, []);
 
   return (
-    <div className="bg-[#020A14] min-h-screen text-white overflow-x-hidden font-sans relative selection:bg-[#00A6D6]/30 selection:text-white">
+    <div className="bg-[#082A55] min-h-screen text-white overflow-x-hidden font-sans relative selection:bg-[#00A6D6]/30 selection:text-white">
       
       {/* Background with Submarine Image */}
       <div 
@@ -30,9 +30,9 @@ export default function PalabrasFundador() {
           className="absolute inset-0 w-full h-full object-cover mix-blend-luminosity animate-slow-pan"
         />
         {/* Overlay (75% blue petroleum for better readability) */}
-        <div className="absolute inset-0 bg-[#020A14]/75 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-[#082A55]/75 mix-blend-multiply"></div>
         {/* Gradient for fading top/bottom if needed, though mostly relying on overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#020A14]/40 via-transparent to-[#020A14]/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#082A55]/40 via-transparent to-[#082A55]/80"></div>
       </div>
 
       <AnimatedBorders />
@@ -64,7 +64,7 @@ export default function PalabrasFundador() {
 
         {/* MAIN CARD */}
         <div 
-          className="max-w-[1100px] mx-auto bg-[#020A14]/40 backdrop-blur-[24px] border border-white/10 rounded-[24px] lg:rounded-[40px] p-6 lg:p-12 xl:p-14 shadow-[0_30px_60px_rgba(0,0,0,0.4)]"
+          className="max-w-[1100px] mx-auto bg-[#082A55]/40 backdrop-blur-[24px] border border-white/10 rounded-[24px] lg:rounded-[40px] p-6 lg:p-12 xl:p-14 shadow-[0_30px_60px_rgba(0,0,0,0.4)]"
           style={{
             opacity: contentEntered ? 1 : 0,
             transform: contentEntered ? 'translateY(0)' : 'translateY(20px)',
@@ -138,7 +138,7 @@ export default function PalabrasFundador() {
             href={WHATSAPP_URL} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="inline-flex items-center gap-3 bg-[#00A6D6] text-[#020A14] px-8 py-4 rounded-full text-[12px] lg:text-[13px] tracking-[0.15em] font-medium uppercase hover:bg-[#00B8ED] transition-all duration-300 shadow-[0_4px_15px_rgba(0,166,214,0.4)] hover:shadow-[0_8px_25px_rgba(0,166,214,0.5)] transform hover:-translate-y-1"
+            className="inline-flex items-center gap-3 bg-[#00A6D6] text-[#082A55] px-8 py-4 rounded-full text-[12px] lg:text-[13px] tracking-[0.15em] font-medium uppercase hover:bg-[#00B8ED] transition-all duration-300 shadow-[0_4px_15px_rgba(0,166,214,0.4)] hover:shadow-[0_8px_25px_rgba(0,166,214,0.5)] transform hover:-translate-y-1"
           >
             Conversemos sobre tu proyecto
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>

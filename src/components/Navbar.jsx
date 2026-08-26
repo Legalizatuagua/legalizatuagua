@@ -77,7 +77,7 @@ export default function Navbar({ activeRoute, setRoute }) {
 
   return (
     <header 
-      className="fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-white/5 bg-[#061A33]/85 backdrop-blur-md py-4"
+      className="fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-white/5 bg-[#0E3B73]/85 backdrop-blur-md py-4"
       style={{
         opacity: opacity,
         transform: `translateY(${translateY}px)`,
@@ -164,7 +164,7 @@ export default function Navbar({ activeRoute, setRoute }) {
       {mobileMenuOpen && (
         <div 
           onClick={() => setMobileMenuOpen(false)}
-          className="lg:hidden fixed top-[73px] left-0 w-full h-[calc(100vh-73px)] bg-[#061A33]/98 backdrop-blur-lg z-40 border-t border-white/5 flex flex-col p-8 gap-6 animate-fade-in"
+          className="lg:hidden fixed top-[73px] left-0 w-full h-[calc(100vh-73px)] bg-[#0E3B73]/98 backdrop-blur-lg z-40 border-t border-white/5 flex flex-col p-8 gap-6 animate-fade-in"
         >
           {navLinks.map((link) => (
             <a
