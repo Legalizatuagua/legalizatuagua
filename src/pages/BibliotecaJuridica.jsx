@@ -186,7 +186,7 @@ export default function BibliotecaJuridica() {
 
           {/* EMPTY STATE */}
           {gridArticles.length === 0 && !isTodos ? (
-            <div className="w-full py-16 lg:py-24 px-6 flex flex-col items-center justify-center text-center bg-[#082A55]/60 backdrop-blur-[16px] border border-white/5 rounded-[20px] lg:rounded-[32px] my-6 shadow-[0_8px_32px_0_rgba(0,0,0,0.25)]">
+            <div className="w-full py-16 lg:py-24 px-6 flex flex-col items-center justify-center text-center bg-[#082A55]/35 backdrop-blur-[16px] border border-white/5 rounded-[20px] lg:rounded-[32px] my-6 shadow-[0_8px_32px_0_rgba(0,0,0,0.25)]">
               <div className="w-14 h-14 rounded-full bg-[#00A6D6]/10 border border-[#00A6D6]/30 flex items-center justify-center mb-5 text-[#00A6D6] shadow-[0_0_20px_rgba(0,166,214,0.25)]">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/>

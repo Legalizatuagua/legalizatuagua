@@ -75,7 +75,7 @@ export default function Servicios() {
           alt="" 
           className="w-full h-full object-cover opacity-60 animate-slow-pan mix-blend-luminosity" 
         />
-        <div className="absolute inset-0 bg-[#104050]/60 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-[#104050]/25 mix-blend-multiply"></div>
       </div>
 
       {/* Main Content Container */}
@@ -112,7 +112,7 @@ export default function Servicios() {
                 const numberDisplay = srv.order || (i + 1);
 
                 return (
-                  <div key={srv.slug || srv.id || i} className="bg-[#082A55]/60 backdrop-blur-[16px] border border-[#00A6D6]/20 rounded-[12px] lg:rounded-[16px] p-5 lg:p-6 flex flex-col items-center text-center shadow-[0_4px_24px_0_rgba(0,166,214,0.05)] relative overflow-hidden group hover:border-[#00A6D6]/40 hover:bg-[#082A55]/80 transition-colors duration-500">
+                  <div key={srv.slug || srv.id || i} className="bg-[#082A55]/35 backdrop-blur-[16px] border border-[#00A6D6]/20 rounded-[12px] lg:rounded-[16px] p-5 lg:p-6 flex flex-col items-center text-center shadow-[0_4px_24px_0_rgba(0,166,214,0.05)] relative overflow-hidden group hover:border-[#00A6D6]/40 hover:bg-[#082A55]/55 transition-colors duration-500">
                     <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent pointer-events-none"></div>
                     <div className="text-[#00A6D6] mb-3 transform group-hover:scale-110 transition-transform duration-500 w-[24px] h-[24px] lg:w-[28px] lg:h-[28px]">
                       {SERVICE_ICONS[iconIndex]}

@@ -296,14 +296,14 @@ export default function Home() {
             <div 
               className="absolute inset-0" 
               style={{
-                background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.55) 100%)',
+                background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.28) 100%)',
               }}
             />
             {/* Layer 2: Neutral vignette */}
             <div 
               className="absolute inset-0" 
               style={{
-                background: 'radial-gradient(circle at center, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.65) 100%)',
+                background: 'radial-gradient(circle at center, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.32) 100%)',
               }}
             />
           </div>
@@ -396,7 +396,7 @@ export default function Home() {
         <div 
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: 'linear-gradient(90deg, rgba(2, 17, 22, 0.88) 0%, rgba(2, 17, 22, 0.65) 35%, rgba(2, 17, 22, 0.20) 70%, rgba(2, 17, 22, 0.08) 100%)',
+            background: 'linear-gradient(90deg, rgba(2, 17, 22, 0.55) 0%, rgba(2, 17, 22, 0.40) 35%, rgba(2, 17, 22, 0.20) 70%, rgba(2, 17, 22, 0.08) 100%)',
             opacity: 1,
           }}
         />
@@ -660,7 +660,7 @@ export default function Home() {
             alt="" 
             className="w-full h-full object-cover opacity-60 animate-slow-pan mix-blend-luminosity" 
           />
-          <div className="absolute inset-0 bg-[#104050]/60 mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-[#104050]/25 mix-blend-multiply"></div>
           {/* Degradado hacia el footer */}
           <div className="absolute inset-x-0 bottom-0 h-32 md:h-48 bg-gradient-to-t from-[#082A55] to-transparent lg:hidden"></div>
         </div>
@@ -764,7 +764,7 @@ export default function Home() {
 
         {/* Access to Palabras del Fundador */}
         <div className="relative z-10 w-full max-w-[720px] mx-auto mt-6 sm:mt-8 px-4 sm:px-0">
-          <div className="bg-gradient-to-br from-[#082A55]/90 to-[#0B4765]/90 backdrop-blur-[24px] border border-[#00A6D6]/30 rounded-[20px] lg:rounded-[28px] p-6 sm:p-7 lg:p-10 flex flex-col items-center text-center shadow-[0_20px_50px_rgba(0,166,214,0.15)] relative overflow-hidden group">
+          <div className="bg-gradient-to-br from-[#082A55]/60 to-[#0B4765]/60 backdrop-blur-[24px] border border-[#00A6D6]/30 rounded-[20px] lg:rounded-[28px] p-6 sm:p-7 lg:p-10 flex flex-col items-center text-center shadow-[0_20px_50px_rgba(0,166,214,0.15)] relative overflow-hidden group">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#00A6D6]/10 to-transparent pointer-events-none transition-opacity duration-700 group-hover:opacity-100 opacity-60"></div>
             
             <h3 className="font-dm-sans text-white/90 text-xl sm:text-2xl lg:text-[26px] font-medium tracking-wide mb-3 relative z-10 uppercase">
@@ -800,7 +800,7 @@ export default function Home() {
             alt="" 
             className="w-full h-full object-cover opacity-60 animate-slow-pan mix-blend-luminosity" 
           />
-          <div className="absolute inset-0 bg-[#104050]/60 mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-[#104050]/25 mix-blend-multiply"></div>
         </div>
 
         {/* SERVICES CONTENT */}
@@ -835,7 +835,7 @@ export default function Home() {
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
                 ];
                 return (
-                  <div key={srv.slug || srv.id || i} className="bg-[#082A55]/60 backdrop-blur-[16px] border border-white/5 rounded-[12px] lg:rounded-[30px] p-4 lg:p-6 shadow-[0_8px_32px_0_rgba(0,0,0,0.25)] relative overflow-hidden group flex flex-col sm:flex-row hover:bg-[#082A55]/80 transition-colors duration-500">
+                  <div key={srv.slug || srv.id || i} className="bg-[#082A55]/35 backdrop-blur-[16px] border border-white/5 rounded-[12px] lg:rounded-[30px] p-4 lg:p-6 shadow-[0_8px_32px_0_rgba(0,0,0,0.25)] relative overflow-hidden group flex flex-col sm:flex-row hover:bg-[#082A55]/55 transition-colors duration-500">
                     <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent pointer-events-none"></div>
                     
                     <div className="flex-1 flex flex-col justify-center relative z-10 sm:pr-6">
@@ -890,7 +890,7 @@ export default function Home() {
             alt="" 
             className="w-full h-full object-cover opacity-60 animate-slow-pan mix-blend-luminosity" 
           />
-          <div className="absolute inset-0 bg-[#104050]/60 mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-[#104050]/25 mix-blend-multiply"></div>
         </div>
 
         {/* CONTENT */}

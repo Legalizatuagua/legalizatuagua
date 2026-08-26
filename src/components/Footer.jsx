@@ -113,7 +113,7 @@ export default function Footer() {
               href="https://www.rumbolegal.cl/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col gap-1.5 p-3 rounded-xl bg-[#104050]/50 border border-[#00A6D6]/20 hover:-translate-y-1 hover:border-[#00A6D6]/50 transition-all duration-300 w-fit lg:w-full"
+              className="group flex flex-col gap-1.5 p-3 rounded-xl bg-[#104050]/20 border border-[#00A6D6]/20 hover:-translate-y-1 hover:border-[#00A6D6]/50 transition-all duration-300 w-fit lg:w-full"
             >
               <div className="flex items-center gap-2">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-[#00A6D6]">

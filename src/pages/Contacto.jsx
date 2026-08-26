@@ -77,7 +77,7 @@ export default function Contacto() {
           alt="" 
           className="w-full h-full object-cover opacity-60 animate-slow-pan mix-blend-luminosity" 
         />
-        <div className="absolute inset-0 bg-[#104050]/60 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-[#104050]/25 mix-blend-multiply"></div>
       </div>
       
       <AnimatedBorders />
@@ -212,7 +212,7 @@ export default function Contacto() {
               </div>
             </div>
           ) : (
-            <div className="max-w-2xl mx-auto bg-gradient-to-br from-[#082A55]/90 to-[#0B4765]/90 backdrop-blur-[24px] border border-[#00A6D6]/30 rounded-[32px] p-12 text-center shadow-[0_20px_50px_rgba(0,166,214,0.15)] flex flex-col items-center">
+            <div className="max-w-2xl mx-auto bg-gradient-to-br from-[#082A55]/60 to-[#0B4765]/60 backdrop-blur-[24px] border border-[#00A6D6]/30 rounded-[32px] p-12 text-center shadow-[0_20px_50px_rgba(0,166,214,0.15)] flex flex-col items-center">
               <div className="w-20 h-20 rounded-full bg-[#00A6D6]/10 flex items-center justify-center mb-6 border border-[#00A6D6]/30 shadow-[0_0_20px_rgba(0,166,214,0.3)]">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00A6D6" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
               </div>

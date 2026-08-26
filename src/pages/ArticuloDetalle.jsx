@@ -144,7 +144,7 @@ export default function ArticuloDetalle({ slug }) {
 
         {/* ARTICLE HEADER CARD */}
         <header 
-          className="bg-gradient-to-br from-[#082A55]/90 to-[#0B4765]/90 backdrop-blur-[20px] border border-white/10 rounded-[24px] lg:rounded-[32px] p-6 sm:p-8 lg:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] mb-8 sm:mb-12 relative overflow-hidden"
+          className="bg-gradient-to-br from-[#082A55]/60 to-[#0B4765]/60 backdrop-blur-[20px] border border-white/10 rounded-[24px] lg:rounded-[32px] p-6 sm:p-8 lg:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] mb-8 sm:mb-12 relative overflow-hidden"
           style={{
             opacity: contentEntered ? 1 : 0,
             transform: contentEntered ? 'translateY(0)' : 'translateY(20px)',

@@ -242,7 +242,7 @@ export default function NuestraVision() {
             {essenceCards.map((card, index) => (
               <div 
                 key={index}
-                className="absolute w-full max-w-[320px] lg:max-w-[400px] bg-gradient-to-br from-[#082A55]/90 to-[#0B4765]/90 backdrop-blur-[24px] border border-[#00A6D6]/30 rounded-[32px] p-8 lg:p-12 flex flex-col items-center text-center shadow-[0_20px_50px_rgba(0,166,214,0.15)] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
+                className="absolute w-full max-w-[320px] lg:max-w-[400px] bg-gradient-to-br from-[#082A55]/60 to-[#0B4765]/60 backdrop-blur-[24px] border border-[#00A6D6]/30 rounded-[32px] p-8 lg:p-12 flex flex-col items-center text-center shadow-[0_20px_50px_rgba(0,166,214,0.15)] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
                 style={getCardStyle(index)}
                 onClick={() => {
                   const diff = (index - carouselIndex + 3) % 3;
