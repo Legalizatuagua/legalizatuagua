@@ -42,6 +42,7 @@ export default function SiteHeader({ currentRoute = '' }) {
             CONTACTO
             {currentRoute === 'contacto' && <span className="absolute -bottom-1 left-0 w-full h-[1px] bg-[#00A6D6]"></span>}
           </a>
+          <a href="https://www.rumbolegal.cl/semaforo-del-agua.html" target="_blank" rel="noopener noreferrer" className="text-[#00A6D6] text-[11px] font-sans tracking-[0.15em] border border-[#00A6D6]/60 rounded-full px-3 py-1 hover:bg-[#00A6D6]/15 transition-colors">SEMÁFORO DEL AGUA</a>
         </nav>
         
         <div className="hidden lg:block">
@@ -121,6 +122,16 @@ export default function SiteHeader({ currentRoute = '' }) {
               className={`py-3.5 px-3 font-sans text-[15px] tracking-[0.12em] transition-colors ${currentRoute === 'contacto' ? 'text-[#00A6D6]' : 'text-white/90 hover:text-[#00A6D6]'}`}
             >
               Contacto
+            </a>
+
+            <a
+              href="https://www.rumbolegal.cl/semaforo-del-agua.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
+              className="py-3.5 px-3 font-sans text-[15px] tracking-[0.12em] transition-colors text-[#00A6D6] hover:text-white"
+            >
+              Semáforo del Agua ↗
             </a>
           </div>
         </div>

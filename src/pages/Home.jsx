@@ -447,6 +447,7 @@ export default function Home() {
                <a href="#casos" onClick={(e) => { e.preventDefault(); document.getElementById('casos')?.scrollIntoView({ behavior: 'smooth' }); }} className={`relative text-[11px] font-sans tracking-[0.15em] transition-colors ${activeSection === 'casos' ? 'text-white' : 'text-white/80 hover:text-[#00A6D6]'}`}>CASOS DE ÉXITO{activeSection === 'casos' && <span className="absolute -bottom-1 left-0 w-full h-[1px] bg-[#00A6D6] animate-fade-in"></span>}</a>
                <a href="#/biblioteca" className="text-white/80 text-[11px] font-sans tracking-[0.15em] hover:text-[#00A6D6] transition-colors">BIBLIOTECA JURÍDICA</a>
                <a href="#/contacto" className="text-white/80 text-[11px] font-sans tracking-[0.15em] hover:text-[#00A6D6] transition-colors">CONTACTO</a>
+               <a href="https://www.rumbolegal.cl/semaforo-del-agua.html" target="_blank" rel="noopener noreferrer" className="text-[#00A6D6] text-[11px] font-sans tracking-[0.15em] border border-[#00A6D6]/60 rounded-full px-3 py-1 hover:bg-[#00A6D6]/15 transition-colors">SEMÁFORO DEL AGUA</a>
              </nav>
              
              <div className="hidden lg:block">
@@ -534,6 +535,15 @@ export default function Home() {
                     className="text-white/90 text-sm font-sans tracking-widest uppercase py-3 hover:text-[#00A6D6] transition-colors flex items-center justify-between"
                   >
                     Contacto
+                  </a>
+                  <a
+                    href="https://www.rumbolegal.cl/semaforo-del-agua.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="text-[#00A6D6] text-sm font-sans tracking-widest uppercase py-3 hover:text-white transition-colors flex items-center justify-between"
+                  >
+                    Semáforo del Agua <span>↗</span>
                   </a>
                 </div>
               </div>

@@ -126,16 +126,7 @@ export default function Navbar({ activeRoute, setRoute }) {
           ))}
           
           <div className="h-4 w-[1px] bg-[#00A6D6]/30 ml-2" />
-
-          <a
-            href="https://www.rumbolegal.cl/semaforo-del-agua.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-[13px] font-semibold uppercase tracking-wider text-white bg-[#00A6D6]/20 hover:bg-[#00A6D6]/35 border border-[#00A6D6]/50 rounded-full px-3 py-1 transition-colors duration-300 ml-2"
-          >
-            Semáforo del Agua
-          </a>
-
+          
           <a
             href="https://www.rumbolegal.cl/"
             target="_blank"
@@ -189,17 +180,7 @@ export default function Navbar({ activeRoute, setRoute }) {
               {link.label}
             </a>
           ))}
-
-          <a
-            href="https://www.rumbolegal.cl/semaforo-del-agua.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-between text-sm font-semibold uppercase tracking-[0.2em] text-white border-b border-[#00A6D6]/20 pb-3 transition-colors hover:text-[#00c8ff]"
-          >
-            <span>Semáforo del Agua</span>
-            <span className="text-lg">↗</span>
-          </a>
-
+          
           <a
             href="https://www.rumbolegal.cl/"
             target="_blank"
