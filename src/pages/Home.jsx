@@ -448,6 +448,7 @@ export default function Home() {
                <a href="#/biblioteca" className="text-white/80 text-[11px] font-sans tracking-[0.15em] hover:text-[#00A6D6] transition-colors">BIBLIOTECA JURÍDICA</a>
                <a href="#/contacto" className="text-white/80 text-[11px] font-sans tracking-[0.15em] hover:text-[#00A6D6] transition-colors">CONTACTO</a>
                <a href="https://www.rumbolegal.cl/semaforo-del-agua.html" target="_blank" rel="noopener noreferrer" className="text-[#00A6D6] text-[11px] font-sans tracking-[0.15em] border border-[#00A6D6]/60 rounded-full px-3 py-1 hover:bg-[#00A6D6]/15 transition-colors">SEMÁFORO DEL AGUA</a>
+               <a href="https://www.rumbolegal.cl/ruta-del-agua.html" target="_blank" rel="noopener noreferrer" className="text-[#00A6D6] text-[11px] font-sans tracking-[0.15em] border border-[#00A6D6]/60 rounded-full px-3 py-1 hover:bg-[#00A6D6]/15 transition-colors">RUTA DEL AGUA</a>
              </nav>
              
              <div className="hidden lg:block">
@@ -544,6 +545,15 @@ export default function Home() {
                     className="text-[#00A6D6] text-sm font-sans tracking-widest uppercase py-3 hover:text-white transition-colors flex items-center justify-between"
                   >
                     Semáforo del Agua <span>↗</span>
+                  </a>
+                  <a
+                    href="https://www.rumbolegal.cl/ruta-del-agua.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="text-[#00A6D6] text-sm font-sans tracking-widest uppercase py-3 hover:text-white transition-colors flex items-center justify-between"
+                  >
+                    Ruta del Agua <span>↗</span>
                   </a>
                 </div>
               </div>
