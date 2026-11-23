@@ -99,7 +99,7 @@ La regularización es el procedimiento jurídico y técnico mediante el cual un 
 Dependiendo del origen del uso del agua y los antecedentes disponibles, existen dos vías principales:
 
 
-  - **Artículo 2° Transitorio del Código de Aguas:** Aplicable para usos consuetudinarios iniciados con anterioridad al Código de Aguas de 1981, siempre que se cumpla con los requisitos probatorios de uso continuo y sin violencia ni clandestinidad.
+  - **Artículo 2° Transitorio del Código de Aguas:** Aplicable para usos consuetudinarios iniciados al menos cinco años antes de la entrada en vigencia del Código de Aguas (29 de octubre de 1981), es decir, desde antes del 29 de octubre de 1976, siempre que se acredite un uso ininterrumpido, sin violencia ni clandestinidad y sin reconocer dominio ajeno.
   - **Artículo 5° Transitorio:** Orientado a derechos emanados de procesos de reforma agraria y parcelaciones de la Corporación de la Reforma Agraria (CORA).
 
 
