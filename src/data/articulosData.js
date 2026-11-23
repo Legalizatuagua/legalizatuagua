@@ -60,7 +60,7 @@ Uno de los puntos más críticos para los titulares de derechos constituidos con
 El incumplimiento de estos plazos puede acarrear la caducidad del derecho, extinguiéndose la titularidad y revirtiendo el recurso al dominio público. Es fundamental que cada usuario revise minuciosamente el estado de sus fojas, números y años de inscripción.
 
 
-## 2. El principio de caducidad por no uso y la patente por no utilización
+## 2. El principio de extinción por no uso y la patente por no utilización
 La reforma refuerza el concepto de que el agua debe ser utilizada efectivamente para los fines autorizados. Se establecen mecanismos más estrictos de cálculo de patentes por no uso y plazos fatales que extinguen el derecho si las obras de captación o restitución no se construyen en los periodos definidos por la ley.
 
 
