@@ -989,7 +989,7 @@ export default function Home() {
                 title: "Condominio Los Ciruelos",
                 period: "2024 – Actualidad",
                 cat: "Comunidad de Aguas",
-                desc: "Coordinación simultánea de 61 solicitudes de regularización para copropietarios: 56 derechos de agua ya reconocidos por la Dirección General de Aguas y los 5 restantes en tramitación."
+                desc: "Coordinación simultánea de 61 solicitudes de regularización para copropietarios: 60 derechos de agua ya reconocidos por la Dirección General de Aguas y el restante en tramitación."
               },
               {
                 img: "/caso_destacado.jpg",
